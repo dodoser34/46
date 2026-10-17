@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Услуги барбершопов и цены: стрижка, борода, фейд, королевское бритьё, камуфляж седины.">
+  <title>Услуги и цены — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>Услуги</span></nav>
+        <h1 class="page-title">Услуги</h1>
+        <p class="page-sub">Единые цены во всех барбершопах сети. Нажмите на услугу, чтобы выбрать мастера и время.</p>
+      </div>
+      <div class="service-grid" id="services"></div>
+
+      <section class="section-sm">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Прайс-лист</span>
+            <h2 class="section-title">Цены и длительность</h2>
+          </div>
+        </div>
+        <div class="card card-pad" id="price-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/services.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+# Простой вариант: сайт + база SQLite в томе barber-data.
+#   docker compose up -d --build      → http://localhost:8000
+# Настройки берутся из backend/.env (скопируйте backend/.env.example).
+services:
+  barber:
+    build: .
+    container_name: barber
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: backend/.env
+        required: false
+    environment:
+      DATA_DIR: /app/data
+    volumes:
+      - barber-data:/app/data
+
+volumes:
+  barber-data:

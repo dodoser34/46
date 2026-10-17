@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Blind Barber — онлайн-запись в лучшие барбершопы Казахстана. Выбери барбершоп, мастера и время за пару кликов.">
+  <title>Blind Barber — запись в лучшие барбершопы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <!-- Главный экран: многослойная сцена (фон + мужчина в кресле + дымка) -->
+    <section class="hero">
+      <div class="hero-bg" data-scene-slot="home"></div>
+      <div class="container">
+        <h1 class="hero-title"><span>Твой стиль</span><span class="indent">начинается</span><span class="accent indent-2">здесь</span></h1>
+        <p class="hero-lead">Найди лучшего барбера в своём городе и запишись онлайн за пару кликов.</p>
+
+        <form class="search-bar" id="hero-search" role="search">
+          <label class="input-icon">
+            <span class="sr-only">Город</span>
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#pin"></use></svg>
+            <select class="select" name="city"><option value="">Ваш город</option></select>
+          </label>
+          <label class="input-icon">
+            <span class="sr-only">Услуга</span>
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#scissors"></use></svg>
+            <select class="select" name="service"><option value="">Выберите услугу</option></select>
+          </label>
+          <button class="go" type="submit" aria-label="Найти барбершоп">
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg>
+          </button>
+        </form>
+
+        <div class="hero-stats">
+          <div><b data-stat="barbershops">6</b><span>Барбершопов</span></div>
+          <div><b data-stat="masters">12</b><span>Профессиональных мастеров</span></div>
+          <div><b>10K+</b><span>Довольных клиентов</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Бегущая строка услуг -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Стрижка</span><span>Фейд</span><span>Борода</span><span>Королевское бритьё</span><span>Камуфляж седины</span><span>Укладка</span>
+        <span>Стрижка</span><span>Фейд</span><span>Борода</span><span>Королевское бритьё</span><span>Камуфляж седины</span><span>Укладка</span>
+      </div>
+    </div>
+
+    <!-- Как это работает -->
+    <section class="section-sm" id="how">
+      <div class="container">
+        <div class="steps steps-stair">
+          <div class="step">
+            <span class="step-num">01</span>
+            <h3>Выбери барбершоп</h3>
+            <p>Сравни рейтинг, отзывы и расположение. Найди место рядом с домом или работой.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <h3>Выбери мастера</h3>
+            <p>Посмотри портфолио, стаж и специализацию каждого барбера.</p>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <h3>Запишись онлайн</h3>
+            <p>Свободное время видно сразу. Без звонков и ожидания — быстро, удобно, надёжно.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Популярные барбершопы -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Рейтинг</span>
+            <h2 class="section-title">Популярные барбершопы</h2>
+          </div>
+          <a class="link-arrow" href="/pages/barbershops.html">Все барбершопы <svg class="icon icon-sm" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></a>
+        </div>
+        <div class="shop-grid bento" id="top-shops"></div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Что мы делаем</span>
+            <h2 class="section-title">Услуги</h2>
+          </div>
+          <a class="link-arrow" href="/pages/services.html">Все услуги и цены <svg class="icon icon-sm" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></a>
+        </div>
+        <div class="service-grid stagger" id="services"></div>
+      </div>
+    </section>
+
+    <!-- Промо магазина: многослойная сцена (мрамор + флакон + баночка) -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="promo promo-breakout">
+          <div data-scene-slot="shop"></div>
+          <div class="promo-content">
+            <span class="eyebrow">Магазин</span>
+            <h2>Профессиональные средства для волос</h2>
+            <p>Выбирай проверенные бренды — тот же уход, что используют барберы в наших барбершопах.</p>
+            <a class="btn btn-primary" href="/pages/shop.html">Перейти в магазин <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- О нас -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="about-teaser overlap">
+          <div class="ph"><img src="/assets/img/about/teaser.jpg" alt="Барбер за работой" loading="lazy"></div>
+          <span class="photo-tag" aria-hidden="true">Est. 2026 · Костанай</span>
+          <div class="about-teaser-body">
+            <span class="eyebrow">О нас</span>
+            <h2>Больше,<br>чем стрижка</h2>
+            <p>Мы объединяем лучшие барбершопы и мастеров, чтобы каждый мужчина мог найти свой стиль — и не тратить время на поиски.</p>
+            <div><a class="btn btn-outline" href="/pages/about.html">Наша история <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Подписка -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h2>Будь в курсе</h2>
+            <p>Акции, новые барбершопы и полезные советы по уходу — раз в месяц, без спама.</p>
+          </div>
+          <form class="newsletter-form" id="subscribe">
+            <label class="sr-only" for="sub-email">Email</label>
+            <input class="input" id="sub-email" type="email" name="email" placeholder="Ваш email" required autocomplete="email">
+            <button class="go" type="submit" aria-label="Подписаться"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/assets/js/pages/home.js"></script>
+</body>
+</html>

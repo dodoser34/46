@@ -1,0 +1,143 @@
+/* =========================================================
+   Главная
+   ========================================================= */
+.hero { position: relative; min-height: min(100vh, 900px); display: flex; align-items: flex-end; padding: calc(var(--header-h) + 60px) 0 70px; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    linear-gradient(90deg, rgba(11, 10, 9, .96) 0%, rgba(11, 10, 9, .78) 38%, rgba(11, 10, 9, .15) 75%),
+    linear-gradient(0deg, var(--bg) 0%, transparent 35%);
+}
+.hero .container { position: relative; z-index: 1; }
+.hero-title { font-family: var(--font-display); font-size: clamp(52px, 8vw, 108px); line-height: .95; text-transform: uppercase; font-weight: 500; letter-spacing: -.005em; }
+.hero-lead { margin-top: 26px; font-size: 17px; color: var(--text-2); max-width: 430px; }
+
+.search-bar {
+  margin-top: 40px; display: flex; align-items: center; max-width: 620px;
+  background: rgba(21, 19, 17, .75); border: 1px solid var(--border-strong); border-radius: 16px;
+  padding: 7px; backdrop-filter: blur(10px);
+}
+.search-bar .input-icon { flex: 1; }
+.search-bar .select { background-color: transparent; border: 0; min-height: 52px; }
+.search-bar .input-icon + .input-icon { border-left: 1px solid var(--border-strong); }
+.search-bar .go { width: 52px; height: 52px; border-radius: 12px; background: var(--accent); border: 0; color: #17110b; display: grid; place-items: center; flex: none; transition: background .2s; }
+.search-bar .go:hover { background: var(--accent-hover); }
+
+.hero-stats { display: flex; gap: 70px; margin-top: 56px; }
+.hero-stats b { display: block; font-family: var(--font-display); font-size: 44px; font-weight: 500; color: var(--accent); line-height: 1; }
+.hero-stats span { font-size: 13px; color: var(--muted); }
+
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.step { padding: 34px 30px; border-top: 1px solid var(--border-strong); }
+.step-num { font-family: var(--font-display); font-size: 40px; color: var(--accent); line-height: 1; }
+.step h3 { font-size: 20px; font-weight: 600; margin: 22px 0 10px; }
+.step p { color: var(--muted); font-size: 14px; }
+
+.promo {
+  position: relative; border-radius: var(--radius-lg); overflow: hidden; min-height: 460px;
+  display: flex; align-items: center; border: 1px solid var(--border);
+}
+.promo .ph { position: absolute; inset: 0; }
+.promo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11, 10, 9, .95) 0%, rgba(11, 10, 9, .7) 40%, transparent 75%); }
+.promo-content { position: relative; z-index: 1; padding: 60px; max-width: 560px; }
+.promo-content h2 { font-family: var(--font-display); font-size: clamp(36px, 4.4vw, 54px); }
+.promo-content p { color: var(--text-2); margin: 18px 0 32px; }
+
+.about-teaser { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border); background: var(--surface); }
+.about-teaser .ph { min-height: 480px; }
+.about-teaser-body { padding: 64px; display: flex; flex-direction: column; justify-content: center; }
+.about-teaser-body h2 { font-family: var(--font-display); font-size: clamp(36px, 4vw, 54px); text-transform: uppercase; }
+.about-teaser-body p { color: var(--text-2); margin: 22px 0 32px; max-width: 420px; }
+
+.newsletter { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface); padding: 56px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.newsletter h2 { font-family: var(--font-display); font-size: clamp(34px, 4vw, 48px); }
+.newsletter p { color: var(--text-2); margin-top: 10px; }
+.newsletter-form { display: flex; gap: 0; background: var(--bg); border: 1px solid var(--border-strong); border-radius: 14px; padding: 6px; }
+.newsletter-form .input { border: 0; background: transparent; }
+.newsletter-form .go { width: 48px; height: 48px; flex: none; border: 0; border-radius: 10px; background: var(--accent); color: #17110b; display: grid; place-items: center; }
+
+/* =========================================================
+   Нестандартная композиция главной
+   ========================================================= */
+
+/* Заголовок «лесенкой» */
+.hero-title span { display: block; }
+.hero-title .indent { padding-left: .9em; }
+.hero-title .indent-2 { padding-left: 2.2em; }
+
+/* Бегущая строка под наклоном */
+.marquee { position: relative; z-index: 4; margin: -28px -20px 0; rotate: -2deg; background: var(--accent); color: #17110b; overflow: hidden; padding: 14px 0; box-shadow: 0 20px 40px rgba(0, 0, 0, .4); }
+.marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee span { font-family: var(--font-display); font-size: 28px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; padding: 0 28px; white-space: nowrap; display: flex; align-items: center; gap: 56px; }
+.marquee span::after { content: "✦"; font-size: 16px; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* Шаги «лестницей» с гигантскими контурными цифрами */
+.steps-stair { padding-top: 40px; }
+.steps-stair .step { position: relative; border-top: 0; padding: 0 10px 0 0; }
+.steps-stair .step:nth-child(2) { margin-top: 70px; }
+.steps-stair .step:nth-child(3) { margin-top: 140px; }
+.steps-stair .step-num {
+  display: block; font-size: 150px; line-height: .8; color: transparent;
+  -webkit-text-stroke: 1px rgba(192, 138, 91, .55); margin-bottom: -40px;
+}
+.steps-stair .step h3 { position: relative; margin-top: 0; padding-top: 14px; border-top: 1px solid var(--border-strong); }
+
+/* Барбершопы — «бенто»: главная карточка на две строки */
+.shop-grid.bento { grid-template-columns: 1.35fr 1fr; }
+.shop-grid.bento .shop-card:first-child { grid-row: span 2; }
+.shop-grid.bento .shop-card:first-child .ph { aspect-ratio: auto; flex: 1; min-height: 380px; }
+.shop-grid.bento .shop-card:first-child h3 { font-size: 40px; }
+.shop-grid.bento .shop-card:not(:first-child) { display: grid; grid-template-columns: 1fr 1fr; }
+.shop-grid.bento .shop-card:not(:first-child) .ph { aspect-ratio: auto; height: 100%; min-height: 200px; }
+
+/* Услуги — карточки со смещением */
+.service-grid.stagger { align-items: start; padding-bottom: 60px; }
+.service-grid.stagger .service-card:nth-child(even) { margin-top: 60px; }
+.service-grid.stagger .service-card:nth-child(4n + 3) { margin-top: 24px; }
+
+/* Промо: флакон выходит за верхнюю границу блока */
+.promo-breakout { overflow: visible; margin-top: 60px; }
+.promo-breakout::after { border-radius: inherit; }
+
+/* О нас: текстовая карточка наезжает на фото */
+.about-teaser.overlap { position: relative; display: grid; grid-template-columns: repeat(12, 1fr); background: none; border: 0; overflow: visible; }
+.about-teaser.overlap .ph { grid-column: 1 / 8; grid-row: 1; border-radius: var(--radius-lg); min-height: 540px; }
+.about-teaser.overlap .about-teaser-body {
+  grid-column: 7 / 13; grid-row: 1; align-self: end; z-index: 2; margin-bottom: -50px;
+  background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); box-shadow: var(--shadow);
+}
+.photo-tag {
+  grid-column: 1 / 8; grid-row: 1; align-self: start; justify-self: start; z-index: 2; margin: 22px;
+  padding: 8px 14px; border-radius: 30px; background: rgba(11, 10, 9, .7); backdrop-filter: blur(8px);
+  border: 1px solid rgba(192, 138, 91, .4); font-size: 11px; letter-spacing: .24em; text-transform: uppercase; color: var(--accent);
+}
+
+@media (max-width: 1100px) {
+  .shop-grid.bento .shop-card:not(:first-child) { display: flex; }
+  .shop-grid.bento .shop-card:not(:first-child) .ph { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
+}
+
+@media (max-width: 900px) {
+  .steps-stair .step:nth-child(n) { margin-top: 0; }
+  .steps-stair { gap: 40px; }
+  .steps-stair .step-num { font-size: 110px; }
+  .shop-grid.bento { grid-template-columns: 1fr; }
+  .shop-grid.bento .shop-card:first-child { grid-row: auto; }
+  .shop-grid.bento .shop-card:first-child .ph { min-height: 300px; }
+  .about-teaser.overlap { grid-template-columns: 1fr; }
+  .about-teaser.overlap .ph, .about-teaser.overlap .about-teaser-body { grid-column: 1; }
+  .about-teaser.overlap .ph { min-height: 340px; }
+  .about-teaser.overlap .about-teaser-body { grid-row: 2; margin: -60px 16px 0; }
+  .photo-tag { grid-column: 1; margin: 16px; }
+}
+
+@media (max-width: 640px) {
+  .hero-title .indent { padding-left: .5em; }
+  .hero-title .indent-2 { padding-left: 1.2em; }
+  .marquee span { font-size: 20px; padding: 0 18px; gap: 36px; }
+  .service-grid.stagger .service-card:nth-child(n) { margin-top: 0; }
+  .service-grid.stagger .service-card:nth-child(even) { margin-top: 32px; }
+  .service-grid.stagger { padding-bottom: 32px; }
+}

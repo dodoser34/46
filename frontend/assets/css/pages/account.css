@@ -1,0 +1,46 @@
+/* =========================================================
+   Аккаунт / вход / админка
+   ========================================================= */
+.auth-wrap { display: grid; grid-template-columns: 1fr 1fr; min-height: calc(100vh - var(--header-h)); }
+.auth-side { position: relative; }
+.auth-side .ph { position: absolute; inset: 0; }
+.auth-side::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(11, 10, 9, .9), transparent 60%); }
+.auth-quote { position: absolute; z-index: 1; left: 48px; right: 48px; bottom: 48px; font-family: var(--font-display); font-size: 36px; line-height: 1.15; }
+.auth-form { display: flex; align-items: center; justify-content: center; padding: 50px 24px; }
+.auth-form > div { width: 100%; max-width: 420px; }
+.auth-form h1 { font-family: var(--font-display); font-size: 48px; margin-bottom: 8px; }
+.auth-form .tabs { margin: 26px 0 28px; }
+.demo-hint { margin-top: 22px; padding: 14px 16px; font-size: 13px; color: var(--muted); }
+
+.account-layout { display: grid; grid-template-columns: 300px 1fr; gap: 30px; align-items: start; }
+.profile-card { text-align: center; padding: 30px 24px; }
+.profile-card .avatar { width: 84px; height: 84px; font-size: 30px; margin: 0 auto 16px; font-family: var(--font-display); }
+.profile-card h3 { font-size: 20px; font-weight: 600; }
+.profile-card p { color: var(--muted); font-size: 13px; }
+.profile-card .btn { margin-top: 10px; }
+
+.list-card { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 20px 22px; margin-bottom: 12px; }
+.list-card h4 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.list-card .meta { flex-wrap: wrap; gap: 6px 16px; }
+
+.status {
+  display: inline-flex; align-items: center; height: 26px; padding: 0 10px; border-radius: 6px;
+  font-size: 12px; font-weight: 600; background: var(--surface-3); color: var(--text-2);
+}
+.status.new { background: rgba(216, 178, 94, .14); color: var(--warning); }
+.status.confirmed, .status.processing { background: rgba(192, 138, 91, .16); color: var(--accent); }
+.status.done { background: rgba(127, 179, 138, .14); color: var(--success); }
+.status.cancelled { background: rgba(217, 119, 106, .12); color: var(--danger); }
+
+.stat-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 14px; margin-bottom: 30px; }
+.stat-card { padding: 20px; }
+.stat-card b { display: block; font-family: var(--font-display); font-size: 38px; color: var(--accent); line-height: 1.1; }
+.stat-card span { font-size: 13px; color: var(--muted); }
+
+.table-wrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th { text-align: left; font-weight: 500; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; padding: 14px 16px; border-bottom: 1px solid var(--border); white-space: nowrap; }
+.table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.table tr:hover td { background: var(--surface-2); }
+.table .select { min-height: 36px; font-size: 13px; padding-left: 12px; width: 150px; }
+.table small { display: block; color: var(--muted); font-size: 12px; }

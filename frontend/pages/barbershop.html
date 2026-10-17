@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Барбершоп: услуги, мастера, отзывы и онлайн-запись.">
+  <title>Барбершоп — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <section class="shop-hero" id="hero">
+      <div class="skeleton" style="position:absolute;inset:0;border-radius:0"></div>
+    </section>
+
+    <div class="container shop-layout">
+      <div>
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" data-tab="overview">Обзор</button>
+          <button class="tab" role="tab" data-tab="services">Услуги</button>
+          <button class="tab" role="tab" data-tab="masters">Мастера</button>
+          <button class="tab" role="tab" data-tab="reviews">Отзывы</button>
+          <button class="tab" role="tab" data-tab="contacts">Контакты</button>
+        </div>
+
+        <div class="tab-panel active" data-panel="overview">
+          <div class="gallery" id="gallery"></div>
+          <div class="prose" id="description"></div>
+        </div>
+        <div class="tab-panel" data-panel="services"><div id="services-list"></div></div>
+        <div class="tab-panel" data-panel="masters" style="padding-top:24px"><div class="master-grid" id="masters"></div></div>
+        <div class="tab-panel" data-panel="reviews">
+          <div id="review-form-wrap"></div>
+          <div id="reviews"></div>
+        </div>
+        <div class="tab-panel" data-panel="contacts"><ul class="contact-list" id="contacts"></ul></div>
+      </div>
+
+      <aside class="card card-pad booking-widget" aria-label="Быстрая запись">
+        <h3>Выберите дату и время</h3>
+        <div class="form-grid">
+          <div class="field">
+            <label for="w-service">Услуга</label>
+            <select class="select" id="w-service"></select>
+          </div>
+          <div class="field">
+            <label for="w-master">Мастер</label>
+            <select class="select" id="w-master"></select>
+          </div>
+        </div>
+        <div id="picker"></div>
+        <button class="btn btn-primary btn-block" id="w-continue" style="margin-top:22px" disabled>
+          Продолжить <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg>
+        </button>
+      </aside>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/barbershop.js"></script>
+</body>
+</html>

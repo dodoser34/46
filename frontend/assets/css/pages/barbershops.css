@@ -1,0 +1,7 @@
+/* =========================================================
+   Список барбершопов
+   ========================================================= */
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 18px; }
+.toolbar .input-icon { flex: 1; min-width: 220px; }
+.toolbar .city-select { width: 210px; }
+.result-count { font-size: 13px; color: var(--muted); margin: 22px 0 16px; }

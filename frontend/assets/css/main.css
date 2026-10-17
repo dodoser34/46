@@ -1,0 +1,16 @@
+/* Blind Barber — точка входа стилей. Порядок важен: токены → компоненты → страницы → адаптив. */
+@import url("base.css");
+@import url("ambient.css");
+@import url("components.css");
+@import url("layout.css");
+@import url("pages/home.css");
+@import url("pages/barbershops.css");
+@import url("pages/barbershop.css");
+@import url("pages/master.css");
+@import url("pages/booking.css");
+@import url("pages/shop.css");
+@import url("pages/about.css");
+@import url("pages/account.css");
+@import url("layers.css");
+@import url("motion.css");
+@import url("responsive.css");

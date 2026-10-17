@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="О сервисе Blind Barber: история, ценности, барбершопы и контакты.">
+  <title>О нас — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <!-- Многослойная сцена: тёмный фон + портрет мастера -->
+    <section class="about-hero">
+      <div data-scene-slot="about"></div>
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>О нас</span></nav>
+        <h1>Больше,<br>чем <span class="accent">стрижка</span></h1>
+        <p>Мы объединяем лучшие барбершопы и мастеров, чтобы каждый мужчина мог найти свой стиль — быстро, удобно и без звонков.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">Наша история</span>
+          <h2 class="section-title">Начали с одного кресла</h2>
+          <p class="muted" style="margin-top:20px">Blind Barber появился как небольшой барбершоп в Костанае — он и сейчас работает на Аль-Фараби, 105. Гости постоянно спрашивали, как записаться без звонков и где найти хорошего мастера в другом городе.</p>
+          <p class="muted" style="margin-top:14px">Так появилась платформа: единая онлайн-запись, честный рейтинг на основе отзывов и магазин средств, которыми барберы пользуются сами. Сегодня с нами работают барбершопы Алматы, Астаны и Костаная.</p>
+        </div>
+        <div class="ph"><img src="/assets/img/about/story.jpg" alt="Интерьер барбершопа" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="numbers" id="numbers">
+          <div><b data-stat="barbershops">6</b><span>барбершопов</span></div>
+          <div><b data-stat="masters">12</b><span>мастеров</span></div>
+          <div><b data-stat="cities">3</b><span>города</span></div>
+          <div><b>10K+</b><span>довольных клиентов</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Ценности</span><h2 class="section-title">Во что мы верим</h2></div></div>
+        <div class="values">
+          <div class="card value">
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#award"></use></svg>
+            <h3>Мастерство</h3>
+            <p>Работаем только с барберами, у которых подтверждённый опыт и портфолио. Рейтинг формируется из реальных отзывов.</p>
+          </div>
+          <div class="card value">
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#clock"></use></svg>
+            <h3>Время клиента</h3>
+            <p>Свободные окна видны сразу. Никаких звонков и ожидания — пришли ко времени, сели в кресло.</p>
+          </div>
+          <div class="card value">
+            <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#coffee"></use></svg>
+            <h3>Атмосфера</h3>
+            <p>Барбершоп — это место, куда хочется возвращаться: кофе, музыка, разговоры и результат, который радует.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts" style="padding-top:0">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">Контакты</span><h2 class="section-title">Наши барбершопы</h2></div></div>
+        <div class="shop-grid" id="shops"></div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h2>Будь в курсе</h2>
+            <p>Акции, новые барбершопы и полезные советы по уходу.</p>
+          </div>
+          <form class="newsletter-form" id="subscribe">
+            <label class="sr-only" for="sub-email">Email</label>
+            <input class="input" id="sub-email" type="email" placeholder="Ваш email" required autocomplete="email">
+            <button class="go" type="submit" aria-label="Подписаться"><svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/assets/js/pages/about.js"></script>
+</body>
+</html>

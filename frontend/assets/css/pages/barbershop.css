@@ -1,0 +1,56 @@
+/* =========================================================
+   Страница барбершопа
+   ========================================================= */
+.shop-hero { position: relative; height: 460px; overflow: hidden; }
+.shop-hero .ph { position: absolute; inset: 0; }
+.shop-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, var(--bg) 0%, rgba(11, 10, 9, .4) 55%, rgba(11, 10, 9, .55) 100%); }
+.shop-hero-top { position: absolute; z-index: 2; top: 24px; left: 0; right: 0; }
+.shop-hero-top .container { display: flex; justify-content: space-between; }
+.shop-hero-top .group { display: flex; gap: 10px; }
+.shop-hero-info { position: absolute; z-index: 2; bottom: 34px; left: 0; right: 0; }
+.shop-hero-info h1 { font-family: var(--font-display); font-size: clamp(48px, 7vw, 84px); text-transform: uppercase; letter-spacing: .02em; }
+.shop-hero-info .metas { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 12px; }
+
+.shop-layout { display: grid; grid-template-columns: 1fr 400px; gap: 40px; align-items: start; padding-top: 10px; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0; }
+.gallery button { padding: 0; border: 0; border-radius: 12px; aspect-ratio: 4 / 3; }
+.gallery button:hover img { transform: scale(1.05); }
+.prose p { color: var(--text-2); margin-bottom: 14px; max-width: 680px; }
+
+.service-row { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--border); }
+.service-row h4 { font-size: 16px; font-weight: 600; }
+.service-row p { font-size: 13px; color: var(--muted); }
+.service-row .right { display: flex; align-items: center; gap: 18px; flex: none; }
+
+.contact-list li { display: flex; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+.contact-list .icon { color: var(--accent); margin-top: 2px; }
+.contact-list small { display: block; color: var(--muted); font-size: 12px; }
+
+.booking-widget { position: sticky; top: calc(var(--header-h) + 20px); }
+.booking-widget h3 { font-size: 18px; font-weight: 600; margin-bottom: 18px; }
+
+/* ---------- Выбор даты и времени ---------- */
+.date-strip-head { display: flex; justify-content: space-between; align-items: center; margin: 18px 0 12px; font-size: 13px; color: var(--text-2); }
+.date-strip-head .nav-btns { display: flex; gap: 4px; }
+.date-strip-head .icon-btn { width: 30px; height: 30px; }
+.date-strip { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+.day-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 0;
+  border-radius: 10px; border: 1px solid transparent; background: var(--surface-2); transition: all .2s;
+}
+.day-btn small { font-size: 11px; color: var(--muted); }
+.day-btn b { font-size: 15px; font-weight: 600; }
+.day-btn:hover { border-color: var(--border-strong); }
+.day-btn.active { background: var(--accent); color: #17110b; }
+.day-btn.active small { color: rgba(23, 17, 11, .7); }
+.day-btn[disabled] { opacity: .35; pointer-events: none; }
+
+.time-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 18px; }
+.time-btn {
+  height: 42px; border-radius: 9px; border: 1px solid var(--border); background: transparent;
+  font-size: 13px; transition: all .2s;
+}
+.time-btn:hover { border-color: var(--accent); }
+.time-btn.active { background: var(--accent); border-color: var(--accent); color: #17110b; font-weight: 600; }
+.time-btn[disabled] { opacity: .3; text-decoration: line-through; pointer-events: none; }
+.slots-note { margin-top: 14px; font-size: 13px; color: var(--muted); }

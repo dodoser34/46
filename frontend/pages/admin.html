@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="robots" content="noindex">
+  <title>Администратор — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><a href="/pages/account.html">Кабинет</a><span class="sep">/</span><span>Администратор</span></nav>
+        <h1 class="page-title">Панель администратора</h1>
+      </div>
+
+      <div class="stat-cards" id="summary"></div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="bookings">Записи</button>
+        <button class="tab" data-tab="orders">Заказы</button>
+      </div>
+
+      <div class="tab-panel active" data-panel="bookings" style="padding-top:20px">
+        <div class="toolbar">
+          <label class="sr-only" for="f-day">Дата</label>
+          <input class="input" type="date" id="f-day" style="width:200px">
+          <label class="sr-only" for="f-status">Статус</label>
+          <select class="select" id="f-status" style="width:200px">
+            <option value="">Все статусы</option>
+            <option value="new">Новые</option>
+            <option value="confirmed">Подтверждённые</option>
+            <option value="done">Выполненные</option>
+            <option value="cancelled">Отменённые</option>
+          </select>
+          <button class="btn btn-ghost btn-sm" id="f-reset">Сбросить</button>
+        </div>
+        <div class="card table-wrap"><table class="table" id="bookings"></table></div>
+      </div>
+
+      <div class="tab-panel" data-panel="orders" style="padding-top:20px">
+        <div class="card table-wrap"><table class="table" id="orders"></table></div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/admin.js"></script>
+</body>
+</html>

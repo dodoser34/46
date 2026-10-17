@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Корзина и оформление заказа.">
+  <title>Корзина — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><a href="/pages/shop.html">Магазин</a><span class="sep">/</span><span>Корзина</span></nav>
+        <h1 class="page-title">Корзина</h1>
+      </div>
+      <div id="cart-root"></div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/cart.js"></script>
+</body>
+</html>

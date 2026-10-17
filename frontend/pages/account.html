@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="robots" content="noindex">
+  <title>Личный кабинет — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>Личный кабинет</span></nav>
+        <h1 class="page-title">Личный кабинет</h1>
+      </div>
+
+      <div class="account-layout">
+        <aside>
+          <div class="card profile-card" id="profile"></div>
+          <form class="card card-pad form-grid hidden" id="profile-form" style="margin-top:14px">
+            <div class="field"><label for="p-name">Имя</label><input class="input" id="p-name" name="name" required minlength="2"></div>
+            <div class="field"><label for="p-phone">Телефон</label><input class="input" id="p-phone" name="phone" type="tel"></div>
+            <button class="btn btn-primary btn-sm" type="submit">Сохранить</button>
+          </form>
+        </aside>
+
+        <div>
+          <div class="tabs" role="tablist">
+            <button class="tab active" data-tab="bookings">Мои записи</button>
+            <button class="tab" data-tab="orders">Заказы</button>
+            <button class="tab" data-tab="favorites">Избранное</button>
+          </div>
+          <div class="tab-panel active" data-panel="bookings" style="padding-top:22px"><div id="bookings"></div></div>
+          <div class="tab-panel" data-panel="orders" style="padding-top:22px"><div id="orders"></div></div>
+          <div class="tab-panel" data-panel="favorites" style="padding-top:22px"><div class="shop-grid" id="favorites"></div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/account.js"></script>
+</body>
+</html>

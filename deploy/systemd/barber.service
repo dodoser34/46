@@ -1,0 +1,24 @@
+# systemd-сервис: запускает Blind Barber при включении сервера и перезапускает при сбое.
+# Ставится скриптом deploy/vps/install.sh. Команды: sudo systemctl status|restart|stop barber
+[Unit]
+Description=Blind Barber (FastAPI)
+After=network.target
+
+[Service]
+User=barber
+Group=barber
+WorkingDirectory=/opt/barber/backend
+EnvironmentFile=/opt/barber/backend/.env
+ExecStart=/opt/barber/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 1 --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=always
+RestartSec=3
+
+# Ограничения безопасности: сервис может писать только в папку с базой
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/barber/data
+
+[Install]
+WantedBy=multi-user.target

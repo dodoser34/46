@@ -1,0 +1,171 @@
+/* =========================================================
+   Адаптив: ноутбук (≤1100), планшет (≤900), телефон (≤640), маленький телефон (≤380)
+   ========================================================= */
+
+/* Колонки сеток не должны растягиваться шире экрана из-за длинного содержимого
+   (вкладки, кнопки, строка категорий) — иначе страница уезжает вбок на телефоне. */
+.shop-layout > *, .product-page > *, .store-layout > *, .booking-layout > *, .cart-layout > *,
+.account-layout > *, .master-page > *, .split > *, .calendar-wrap > *, .newsletter > *, .auth-wrap > * { min-width: 0; }
+
+/* Высота первого экрана с учётом панелей мобильного браузера */
+@supports (height: 100svh) { .hero { min-height: min(100svh, 900px); } }
+
+html { -webkit-tap-highlight-color: transparent; -webkit-text-size-adjust: 100%; }
+
+/* =========================================================
+   Широкие экраны: контент на всю ширину, больше колонок
+   ========================================================= */
+@media (min-width: 1500px) {
+  .shop-grid { grid-template-columns: repeat(4, 1fr); }
+  .product-grid { grid-template-columns: repeat(4, 1fr); }
+  .shop-list { grid-template-columns: repeat(3, 1fr); }
+  .shop-row { grid-template-columns: 150px 1fr auto; }
+  .pick-masters { grid-template-columns: repeat(3, 1fr); }
+  .shop-layout { grid-template-columns: 1fr 460px; gap: 56px; }
+  .booking-layout { grid-template-columns: 1fr 420px; gap: 48px; }
+  .cart-layout { grid-template-columns: 1fr 460px; gap: 48px; }
+  .store-layout { grid-template-columns: 260px 1fr; gap: 40px; }
+  .shop-hero { height: clamp(460px, 34vw, 680px); }
+  .promo { min-height: 540px; }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .works { grid-template-columns: repeat(3, 1fr); }
+  .section { padding: 110px 0; }
+  .steps { gap: 48px; }
+  .values, .numbers { gap: 28px; }
+}
+
+@media (min-width: 1900px) {
+  .product-grid { grid-template-columns: repeat(5, 1fr); }
+  .shop-list { grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .master-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .service-grid { gap: 24px; }
+  .shop-grid { gap: 28px; }
+}
+
+/* «С этим покупают» — всегда один полный ряд из 4 карточек на компьютере */
+@media (min-width: 901px) { .product-grid.related-grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* Крупные элементы не раздуваются бесконечно на огромных мониторах */
+.product-image { max-width: 760px; width: 100%; }
+.master-photo { max-height: calc(100vh - var(--header-h) - 40px); }
+.page-sub { max-width: 640px; }
+@media (max-width: 1100px) {
+  .nav { gap: 20px; }
+  .header-inner { gap: 26px; }
+  .service-grid { grid-template-columns: repeat(3, 1fr); }
+  .shop-list { grid-template-columns: 1fr; }
+  .shop-layout, .booking-layout, .cart-layout { grid-template-columns: 1fr; }
+  .booking-widget, .summary { position: static; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 900px) {
+  :root { --header-h: 66px; }
+  .nav, .header-actions .btn, .header-actions .hide-mobile { display: none; }
+  .burger { display: inline-grid; }
+  .section { padding: 64px 0; }
+  .hero-stats { gap: 36px; }
+  .steps, .values { grid-template-columns: 1fr; }
+  .shop-grid, .product-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-teaser, .split, .newsletter, .master-page, .product-page, .auth-wrap, .account-layout { grid-template-columns: 1fr; }
+  .about-teaser .ph { min-height: 320px; }
+  .about-teaser-body, .newsletter { padding: 40px 28px; }
+  .master-photo { position: static; max-height: 560px; }
+  .store-layout { grid-template-columns: 1fr; }
+  .cat-list { position: static; flex-direction: row; overflow-x: auto; scrollbar-width: none; }
+  .cat-list button { white-space: nowrap; }
+  .cat-list button.active { box-shadow: inset 0 -2px 0 var(--accent); }
+  .auth-side { display: none; }
+  .numbers { grid-template-columns: repeat(2, 1fr); gap: 34px; }
+  .stat-cards { grid-template-columns: repeat(3, 1fr); }
+  .promo-content { padding: 40px 28px; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 16px; }
+  body { font-size: 14px; }
+  .hero { padding-bottom: 46px; }
+  .hero-bg::after { background: linear-gradient(0deg, var(--bg) 10%, rgba(11, 10, 9, .7) 60%, rgba(11, 10, 9, .45)); }
+  .search-bar { flex-direction: column; align-items: stretch; }
+  .search-bar .input-icon + .input-icon { border-left: 0; border-top: 1px solid var(--border-strong); }
+  .search-bar .go { width: 100%; }
+  .hero-stats { gap: 24px; justify-content: space-between; }
+  .hero-stats b { font-size: 34px; }
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .shop-grid, .product-grid, .service-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .shop-grid { grid-template-columns: 1fr; }
+  .service-card-body, .product-card-body { padding: 14px; flex-direction: column; align-items: flex-start; }
+  .service-card .duration { display: block; margin: 2px 0 0; }
+  .shop-row { grid-template-columns: 110px 1fr; gap: 14px; }
+  .shop-row .side { grid-column: 1 / -1; flex-direction: row; align-items: center; }
+  .shop-row h3 { font-size: 22px; }
+  .toolbar .city-select { width: 100%; }
+  .form-row, .radio-cards { grid-template-columns: 1fr; }
+  .shop-hero { height: 380px; }
+  .gallery { gap: 8px; }
+  .time-grid { grid-template-columns: repeat(3, 1fr); }
+  .pick-masters { grid-template-columns: 1fr; }
+  .calendar-wrap { grid-template-columns: 1fr; }
+  .time-list { flex-direction: row; flex-wrap: wrap; max-height: none; }
+  .time-list .time-btn { width: calc(33.33% - 6px); }
+  .stepper-item { font-size: 10px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { flex-direction: column; }
+  .cart-item { grid-template-columns: 72px 1fr; }
+  .cart-item .ph { width: 72px; height: 72px; }
+  .cart-item .line-total { grid-column: 2; }
+  .list-card { flex-direction: column; align-items: flex-start; }
+  .perks { grid-template-columns: 1fr; }
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .master-stats b { font-size: 26px; }
+  .promo { min-height: 380px; }
+  .promo::after, .shop-banner::after { background: linear-gradient(0deg, rgba(11, 10, 9, .95) 20%, rgba(11, 10, 9, .6)); }
+  .shop-banner-content { padding: 30px 22px; }
+  .card-pad { padding: 20px; }
+  .toasts { left: 16px; right: 16px; bottom: 16px; }
+
+  /* Поля ввода 16px — иначе iPhone приближает страницу при нажатии на поле */
+  .input, .select, .textarea { font-size: 16px; }
+
+  /* Крупные заголовки уменьшаются, чтобы длинные слова помещались в ширину экрана */
+  .hero-title { font-size: clamp(40px, 12.5vw, 60px); }
+  .promo-content h2, .shop-banner h1, .about-teaser-body h2, .newsletter h2 { font-size: clamp(28px, 8.5vw, 36px); overflow-wrap: anywhere; }
+  .page-title, .about-hero h1, .master-page h1, .product-info h1 { overflow-wrap: anywhere; }
+  .shop-hero-info h1 { font-size: clamp(40px, 12vw, 56px); }
+
+  /* Карточка товара: количество и кнопка «В корзину» переносятся в колонку */
+  .buy-row { flex-wrap: wrap; }
+  .buy-row .btn { flex: 1 1 100%; }
+  .product-price { font-size: 32px; }
+
+  /* Вкладки листаются пальцем, а не ломают ширину */
+  .tabs { gap: 22px; margin-right: -16px; padding-right: 16px; }
+
+  /* Строки услуг: цена и кнопка «Записаться» уходят под описание */
+  .service-row { flex-wrap: wrap; }
+  .service-row .right { width: 100%; justify-content: space-between; }
+
+  /* Вход: меньше отступы, длинные email в подсказке переносятся */
+  .auth-form { padding: 36px 16px; }
+  .demo-hint { overflow-wrap: anywhere; }
+
+  /* Шаги записи: кнопки на всю ширину, «Назад» — компактная */
+  .step-actions .btn-primary { flex: 1; }
+
+}
+
+/* Маленькие телефоны (iPhone SE, старые Android) */
+@media (max-width: 380px) {
+  .service-grid, .product-grid { grid-template-columns: 1fr; }
+  .service-grid.stagger .service-card:nth-child(n) { margin-top: 0; }
+  .hero-stats b { font-size: 28px; }
+  .hero-stats span { font-size: 11px; }
+  .time-grid, .date-strip { gap: 4px; }
+  .day-btn b { font-size: 13px; }
+  .stepper-item { font-size: 9px; }
+  .logo-svg { height: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}

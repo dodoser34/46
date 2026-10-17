@@ -1,0 +1,14 @@
+**/__pycache__
+**/.pytest_cache
+backend/.venv
+backend/data
+backend/tests
+backend/.env
+_old_react_scaffold
+assets-src
+docs
+deploy
+scripts
+.git
+.claude
+*.md

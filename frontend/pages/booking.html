@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Онлайн-запись на стрижку: выберите услугу, мастера, дату и время.">
+  <title>Запись на стрижку — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>Бронирование</span></nav>
+        <h1 class="page-title">Запись на стрижку</h1>
+      </div>
+
+      <div id="wizard">
+        <div class="stepper" id="stepper">
+          <button class="stepper-item active" data-goto="1"><span class="num">1</span>Услуга</button>
+          <button class="stepper-item" data-goto="2" disabled><span class="num">2</span>Мастер</button>
+          <button class="stepper-item" data-goto="3" disabled><span class="num">3</span>Дата и время</button>
+          <button class="stepper-item" data-goto="4" disabled><span class="num">4</span>Подтверждение</button>
+        </div>
+
+        <div class="booking-layout">
+          <div>
+            <!-- Шаг 1 -->
+            <section class="booking-step active" data-step="1">
+              <h2>Барбершоп и услуга</h2>
+              <div class="field" style="margin-bottom:22px">
+                <label for="shop">Барбершоп</label>
+                <select class="select" id="shop"></select>
+              </div>
+              <div class="pick-list" id="service-list"></div>
+            </section>
+
+            <!-- Шаг 2 -->
+            <section class="booking-step" data-step="2">
+              <h2>Выберите мастера</h2>
+              <div class="pick-list pick-masters" id="master-list"></div>
+            </section>
+
+            <!-- Шаг 3 -->
+            <section class="booking-step" data-step="3">
+              <h2>Дата и время</h2>
+              <div class="calendar-wrap">
+                <div class="card calendar" id="calendar"></div>
+                <div>
+                  <div class="time-list" id="time-list"></div>
+                  <p class="slots-note" id="slots-note"></p>
+                </div>
+              </div>
+            </section>
+
+            <!-- Шаг 4 -->
+            <section class="booking-step" data-step="4">
+              <h2>Ваши данные</h2>
+              <form class="form-grid" id="client-form" novalidate>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="name">Имя</label>
+                    <input class="input" id="name" name="name" autocomplete="name" required minlength="2" placeholder="Как к вам обращаться">
+                    <span class="field-error" data-error="name"></span>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Телефон</label>
+                    <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="+7 7__ ___ __ __">
+                    <span class="field-error" data-error="phone"></span>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="comment">Комментарий <span class="muted">(необязательно)</span></label>
+                  <textarea class="textarea" id="comment" name="comment" maxlength="500" placeholder="Пожелания мастеру"></textarea>
+                </div>
+                <p class="muted" style="font-size:13px">Нажимая «Записаться», вы соглашаетесь на обработку персональных данных для оформления записи.</p>
+              </form>
+            </section>
+
+            <div class="step-actions">
+              <button class="btn btn-ghost" id="back">
+                <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-left"></use></svg> Назад
+              </button>
+              <button class="btn btn-primary" id="next" disabled>
+                Продолжить <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#arrow-right"></use></svg>
+              </button>
+            </div>
+          </div>
+
+          <aside class="card card-pad summary" aria-label="Ваша запись">
+            <h3>Ваша запись</h3>
+            <div id="summary"></div>
+          </aside>
+        </div>
+      </div>
+
+      <div id="success" class="hidden"></div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/booking.js"></script>
+</body>
+</html>

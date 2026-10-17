@@ -1,0 +1,199 @@
+/* =========================================================
+   Анимации сайта. Классы ставит assets/js/components/motion.js;
+   без JS или при «уменьшить движение» контент виден сразу.
+   ========================================================= */
+
+/* ---------- Появление блоков при прокрутке ---------- */
+.reveal {
+  opacity: 0;
+  translate: 0 36px;
+  transition:
+    opacity .9s var(--ease), translate .9s var(--ease),
+    transform .3s var(--ease), border-color .25s, background .25s, box-shadow .3s;
+}
+.reveal.in { opacity: 1; translate: 0 0; }
+
+/* Фото внутри карточки «приближается» при появлении */
+.reveal .ph > img { scale: 1.18; }
+.reveal.in .ph > img { scale: 1; }
+.ph > img { transition: transform .6s var(--ease), opacity .6s, scale 1.6s var(--ease); }
+
+/* ---------- Слова заголовков выезжают снизу ---------- */
+.split-reveal .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: .08em; margin-bottom: -.08em; }
+.split-reveal .wi {
+  display: inline-block; translate: 0 110%; rotate: 4deg;
+  transition: translate 1s var(--ease), rotate 1s var(--ease);
+  transition-delay: calc(var(--i, 0) * 70ms);
+}
+.split-reveal.in .wi { translate: 0 0; rotate: 0deg; }
+
+/* ---------- Главный экран: заставка при загрузке ---------- */
+.motion .hero-title > span { overflow: hidden; padding-bottom: .06em; }
+.motion .hero-title .line-inner { display: block; animation: line-up 1.1s var(--ease) both; animation-delay: calc(.15s + var(--i) * .14s); }
+.motion .hero-lead { animation: fade-up 1s .65s var(--ease) both; }
+.motion .search-bar { animation: fade-up 1s .8s var(--ease) both; }
+.motion .hero-stats > div { animation: fade-up 1s var(--ease) both; }
+.motion .hero-stats > div:nth-child(1) { animation-delay: .95s; }
+.motion .hero-stats > div:nth-child(2) { animation-delay: 1.05s; }
+.motion .hero-stats > div:nth-child(3) { animation-delay: 1.15s; }
+.motion .scene-home .layer-bg > img { animation: zoom-out 2.4s var(--ease) both; }
+.motion .scene-home .el-man { animation: man-in 1.6s .35s var(--ease) both; }
+.motion .scene-home .el-word { animation: word-in 2s .2s var(--ease) both; }
+.motion .marquee { animation: marquee-in 1.1s 1.1s var(--ease) both; }
+
+@keyframes line-up { from { transform: translateY(105%) rotate(3deg); } to { transform: none; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes zoom-out { from { transform: scale(1.18); filter: brightness(.4); } to { transform: scale(1); filter: none; } }
+@keyframes man-in { from { opacity: 0; transform: translateX(60px) scale(1.04); filter: blur(10px) drop-shadow(0 30px 40px rgba(0, 0, 0, .55)); } }
+@keyframes word-in { from { opacity: 0; letter-spacing: .3em; } }
+@keyframes marquee-in { from { opacity: 0; transform: translateY(40px) rotate(4deg); } }
+
+/* Внутренние страницы: обложка барбершопа и «О нас» тоже «проявляются» */
+.motion .shop-hero .ph > img, .motion .about-hero .layer-bg > img { animation: zoom-out 2s var(--ease) both; }
+.motion .scene-about .el-portrait, .motion .scene-booking .el-chair { animation: man-in 1.5s .3s var(--ease) both; }
+.motion .scene-shop .el-bottle { animation: float 6s 1s ease-in-out infinite; }
+.motion .scene-shop .el-jar { animation: float 7s 1.6s ease-in-out infinite reverse; }
+@keyframes float { 50% { transform: translateY(-14px); } }
+
+/* ---------- Карточки: наклон и блик за курсором ---------- */
+.shop-card, .service-card, .product-card, .master-card { position: relative; transform-style: preserve-3d; will-change: transform; }
+.shop-card::after, .service-card::after, .product-card::after, .master-card::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: 2;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(192, 138, 91, .16), transparent 45%);
+  opacity: 0; transition: opacity .3s;
+}
+.tilting::after { opacity: 1; }
+.tilting { transition: transform .12s linear, border-color .25s !important; border-color: rgba(192, 138, 91, .45) !important; }
+
+/* ---------- Магнитные кнопки ---------- */
+.btn-primary, .search-bar .go, .newsletter-form .go, .icon-btn.bordered { transition: translate .35s var(--ease), background .2s, border-color .2s, color .2s; }
+.magnet-active { transition: translate .12s linear, background .2s, border-color .2s; }
+
+/* Стрелка в кнопке уезжает вправо при наведении */
+.btn .icon, .link-arrow .icon, .round-arrow .icon { transition: transform .35s var(--ease); }
+.btn:hover .icon, .link-arrow:hover .icon, .service-card:hover .round-arrow .icon { transform: translateX(4px); }
+
+/* ---------- Волна при нажатии ---------- */
+.btn, .chip, .time-btn, .day-btn, .cal-day, .cart-btn { position: relative; overflow: hidden; }
+.ripple {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  background: rgba(255, 255, 255, .28); transform: scale(0); animation: ripple .65s ease-out forwards;
+}
+.btn-primary .ripple, .chip.active .ripple, .time-btn.active .ripple { background: rgba(23, 17, 11, .25); }
+@keyframes ripple { to { transform: scale(1); opacity: 0; } }
+
+/* ---------- Курсор-кольцо (только мышь) ---------- */
+.cursor-ring {
+  position: fixed; left: 0; top: 0; z-index: 200; pointer-events: none;
+  width: 0; height: 0; opacity: 0; transition: opacity .3s;
+}
+.cursor-ring.on { opacity: 1; }
+.cursor-ring::before {
+  content: ""; position: absolute; left: -16px; top: -16px; width: 32px; height: 32px; border-radius: 50%;
+  border: 1px solid rgba(192, 138, 91, .7);
+  transition: transform .35s var(--ease), background .3s, border-color .3s;
+}
+.cursor-ring.hover::before { transform: scale(1.5); background: rgba(192, 138, 91, .1); }
+.cursor-ring.view::before { transform: scale(2.6); background: rgba(192, 138, 91, .92); border-color: transparent; }
+.cursor-ring.down::before { transform: scale(.75); }
+.cursor-ring span {
+  position: absolute; left: 0; top: 0; translate: -50% -50%; white-space: nowrap;
+  font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #17110b;
+  opacity: 0; transition: opacity .2s;
+}
+.cursor-ring.view span { opacity: 1; }
+
+/* ---------- Прогресс прокрутки и шапка ---------- */
+.scroll-progress {
+  position: fixed; left: 0; right: 0; top: 0; height: 2px; z-index: 70; pointer-events: none;
+  background: linear-gradient(90deg, var(--accent), #f0c08f); transform-origin: left; transform: scaleX(0);
+}
+.header { transition: background .3s, border-color .3s, transform .45s var(--ease); }
+.header.is-hidden { transform: translateY(-100%); }
+
+/* Пункты меню: подчёркивание вырастает слева */
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: var(--accent); transform: scaleX(0); transform-origin: right; transition: transform .4s var(--ease); }
+.nav a:hover::after, .nav a.active::after { transform: scaleX(1); transform-origin: left; }
+
+/* ---------- Логотип: глаз «моргает», искра вращается ---------- */
+.logo-svg .logo-lashes { transform-box: fill-box; transform-origin: 50% 0; }
+.logo-svg .logo-star { transform-box: fill-box; transform-origin: center; transition: transform .6s var(--ease); }
+.logo:hover .logo-lashes { animation: blink .7s var(--ease); }
+.logo:hover .logo-star { transform: rotate(180deg) scale(1.3); }
+.motion .header .logo-lashes { animation: blink .6s 2.2s var(--ease); }
+@keyframes blink { 0%, 100% { transform: scaleY(1); } 35% { transform: scaleY(.15); } 60% { transform: scaleY(1.25); } }
+
+/* ---------- Корзина: полёт товара и «прыжок» иконки ---------- */
+.fly-dot {
+  position: fixed; z-index: 150; width: 54px; height: 54px; border-radius: 50%; pointer-events: none;
+  background: var(--accent) center / cover no-repeat; box-shadow: 0 10px 30px rgba(0, 0, 0, .5), 0 0 0 3px rgba(192, 138, 91, .5);
+}
+.bump { animation: bump .5s var(--ease); }
+.bump .badge-count { animation: badge-pop .5s var(--ease); }
+@keyframes bump { 30% { transform: scale(1.25) rotate(-8deg); } 60% { transform: scale(.92) rotate(4deg); } }
+@keyframes badge-pop { 40% { transform: scale(1.6); } }
+
+/* ---------- Искры ---------- */
+.spark { position: fixed; z-index: 160; pointer-events: none; color: var(--accent); line-height: 1; text-shadow: 0 0 10px rgba(192, 138, 91, .6); }
+
+/* ---------- Сердечко избранного ---------- */
+.fav-btn.active .icon { animation: heart-pop .5s var(--ease); }
+@keyframes heart-pop { 30% { transform: scale(1.45); } 60% { transform: scale(.9); } }
+
+/* ---------- Мелочи интерфейса ---------- */
+.chip, .time-btn, .day-btn, .cal-day { transition: background .25s, border-color .25s, color .25s, transform .25s var(--ease); }
+.chip:hover, .time-btn:not([disabled]):hover, .day-btn:hover { transform: translateY(-2px); }
+.time-btn.active, .day-btn.active, .cal-day.active { animation: pick .4s var(--ease); }
+@keyframes pick { 40% { transform: scale(1.12); } }
+
+.pick-item { transition: border-color .25s, background .25s, transform .3s var(--ease); }
+.pick-item:hover { transform: translateX(4px); }
+.pick-item.active .check { animation: pick .4s var(--ease); }
+
+/* Линия прогресса шагов записи */
+.stepper::after {
+  content: ""; position: absolute; top: 15px; left: 12.5%; height: 1px; background: var(--accent);
+  width: calc(75% * var(--progress, 0)); transition: width .6s var(--ease);
+}
+.stepper-item .num { position: relative; z-index: 1; }
+
+/* Успешная запись / заказ: галочка «рисуется», вокруг расходится кольцо */
+.success-icon { position: relative; }
+.success-icon::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--accent); animation: ring-out 1.6s .2s var(--ease) both; }
+.success-icon .icon { stroke-dasharray: 26; stroke-dashoffset: 26; animation: draw .7s .35s var(--ease) forwards; }
+@keyframes ring-out { from { transform: scale(1); opacity: 1; } to { transform: scale(2.2); opacity: 0; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+/* Бегущая строка останавливается при наведении */
+.marquee:hover .marquee-track { animation-play-state: paused; }
+
+/* Скелетоны загрузки — мягкое «дыхание» вместо резкого блика */
+.skeleton { animation: shimmer 1.4s infinite, breathe 2.4s ease-in-out infinite; }
+@keyframes breathe { 50% { opacity: .6; } }
+
+/* ---------- Переход между страницами: шторка с логотипом ----------
+   Уход: шторка плавно закрывает страницу (motion.js), браузер переходит по ссылке.
+   Приход: маленький скрипт в <head> ещё до отрисовки ставит класс page-entering —
+   новая страница появляется уже под шторкой, затем шторка растворяется, а контент выплывает.
+   Работает одинаково во всех браузерах. */
+html::after {
+  content: ""; position: fixed; inset: 0; z-index: 300; pointer-events: none;
+  background: var(--bg) url("../img/brand/mark.svg") center / 72px no-repeat;
+  opacity: 0; transition: opacity .38s cubic-bezier(.4, 0, .2, 1);
+}
+html.page-leaving::after, html.page-entering::after { opacity: 1; }
+html.page-leaving::after { pointer-events: auto; }
+/* Запасной таймер: если скрипт не сработал, шторка всё равно исчезнет */
+html.page-entering::after { animation: curtain-fallback .5s 1.6s forwards; }
+@keyframes curtain-fallback { to { opacity: 0; } }
+
+.page-arrived main { animation: page-in .7s var(--ease) both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(18px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html::after { display: none; }
+  .reveal, .split-reveal .wi { opacity: 1 !important; translate: none !important; }
+  .success-icon .icon { stroke-dashoffset: 0; animation: none; }
+  .success-icon::after { display: none; }
+}

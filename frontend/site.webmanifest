@@ -1,0 +1,11 @@
+{
+  "name": "Blind Barber — запись в барбершопы",
+  "short_name": "Blind Barber",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0A09",
+  "theme_color": "#0B0A09",
+  "icons": [
+    { "src": "/assets/img/brand/app-icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

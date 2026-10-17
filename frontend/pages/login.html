@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Вход и регистрация в личном кабинете Blind Barber.">
+  <title>Вход — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main" class="auth-wrap">
+    <!-- Многослойная сцена: интерьер + кресло + инструменты -->
+    <div class="auth-side">
+      <div data-scene-slot="booking"></div>
+      <p class="auth-quote">Запись в лучшие барбершопы —<br><span class="accent">в пару кликов</span></p>
+    </div>
+
+    <div class="auth-form">
+      <div>
+        <h1 id="title">С возвращением</h1>
+        <p class="muted" id="subtitle">Войдите, чтобы видеть свои записи, заказы и избранное.</p>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" data-mode="login" role="tab">Вход</button>
+          <button class="tab" data-mode="register" role="tab">Регистрация</button>
+        </div>
+
+        <form class="form-grid" id="auth-form" novalidate>
+          <div class="field hidden" data-only="register">
+            <label for="name">Имя</label>
+            <input class="input" id="name" name="name" autocomplete="name" placeholder="Ваше имя">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          </div>
+          <div class="field hidden" data-only="register">
+            <label for="phone">Телефон <span class="muted">(необязательно)</span></label>
+            <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 7__ ___ __ __">
+          </div>
+          <div class="field">
+            <label for="password">Пароль</label>
+            <input class="input" id="password" name="password" type="password" autocomplete="current-password" required minlength="6" placeholder="Не менее 6 символов">
+          </div>
+          <p class="field-error" id="error" role="alert"></p>
+          <button class="btn btn-primary btn-block" type="submit" id="submit">Войти</button>
+        </form>
+
+        <div class="card demo-hint">
+          Демо-доступ для проверки: <b>demo@barber.kz</b> / <b>demo123</b><br>
+          Администратор: <b>admin@barber.kz</b> / <b>admin123</b>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+# Вариант для продакшена: сайт + PostgreSQL.
+#   1) скопируйте deploy/.env.production.example в .env (рядом с этим файлом) и заполните пароли
+#   2) docker compose -f docker-compose.postgres.yml up -d --build
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: barber
+      POSTGRES_USER: barber
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Задайте POSTGRES_PASSWORD в файле .env}
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U barber -d barber"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  barber:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:8000:8000"   # наружу открывает nginx; без nginx замените на "8000:8000"
+    environment:
+      ENV: production
+      DATABASE_URL: postgresql://barber:${POSTGRES_PASSWORD}@db:5432/barber
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@barber.kz}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:?Задайте ADMIN_PASSWORD в файле .env}
+      SEED_DEMO_DATA: ${SEED_DEMO_DATA:-true}
+      WEB_CONCURRENCY: ${WEB_CONCURRENCY:-2}
+
+volumes:
+  pg-data:

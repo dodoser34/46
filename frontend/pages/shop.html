@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Магазин профессиональных средств для волос и бороды: шампуни, паста, воск, масло для бороды.">
+  <title>Магазин — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head" style="padding-bottom:20px">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>Магазин</span></nav>
+      </div>
+
+      <!-- Баннер: многослойная сцена (мрамор + флакон + баночка) -->
+      <section class="shop-banner">
+        <div data-scene-slot="shop"></div>
+        <div class="shop-banner-content">
+          <h1>Профессиональные средства для волос</h1>
+          <p>Тот же уход, что используют барберы в наших барбершопах. Самовывоз из любого барбершопа или доставка курьером.</p>
+        </div>
+      </section>
+
+      <div class="store-layout">
+        <aside>
+          <nav class="cat-list" id="categories" aria-label="Категории"></nav>
+        </aside>
+        <div>
+          <div class="toolbar">
+            <label class="input-icon">
+              <span class="sr-only">Поиск товаров</span>
+              <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#search"></use></svg>
+              <input class="input" id="q" type="search" placeholder="Поиск товаров…">
+            </label>
+            <label class="sr-only" for="sort">Сортировка</label>
+            <select class="select" id="sort" style="width:220px">
+              <option value="popular">Сначала популярные</option>
+              <option value="rating">По рейтингу</option>
+              <option value="price_asc">Сначала дешевле</option>
+              <option value="price_desc">Сначала дороже</option>
+            </select>
+          </div>
+          <p class="result-count" id="count" aria-live="polite" style="margin-top:4px"></p>
+          <div class="product-grid" id="products"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <title>Страница не найдена — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="empty" style="padding:120px 20px">
+        <p class="display" style="font-size:120px;line-height:1;color:var(--accent)">404</p>
+        <p class="display">Страница не найдена</p>
+        <p>Возможно, ссылка устарела. Вернитесь на главную или найдите барбершоп.</p>
+        <a class="btn btn-primary" href="/">На главную</a>
+      </div>
+    </div>
+  </main>
+  <script type="module">
+    import { initLayout } from '/assets/js/components/layout.js';
+    initLayout();
+  </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Стабильные переводы строк при скачивании через Git на Windows / Linux.
+* text=auto
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf

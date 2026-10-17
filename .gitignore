@@ -1,0 +1,59 @@
+# Python: локальное окружение и кэш создаются на каждом компьютере заново.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.egg-info/
+
+# Личные настройки. Примеры ОБЯЗАТЕЛЬНО остаются в Git.
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Рабочая база и резервные копии. Новая демо-база создаётся при запуске.
+/backend/data/
+*.db
+*.db-wal
+*.db-shm
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite3-wal
+*.sqlite3-shm
+backups/
+
+# Временные файлы и исходные материалы генерации изображений.
+# Готовые изображения frontend/assets/img/ остаются в Git.
+/tmp/
+/temp/
+/assets-src/
+*.log
+*.tmp
+*.bak
+node_modules/
+/build/
+/dist/
+
+# Редакторы и ОС
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Локальные настройки инструментов
+.claude/

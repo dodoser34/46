@@ -1,0 +1,31 @@
+# Render Blueprint — деплой в пару кликов: render.com → New → Blueprint → выбрать репозиторий.
+# Создаст сайт (Docker) и базу PostgreSQL, сам свяжет их и сгенерирует пароль администратора
+# (посмотреть: сервис barber → Environment → ADMIN_PASSWORD).
+databases:
+  - name: barber-db
+    plan: free            # бесплатная база Render работает ограниченный срок — для постоянной работы выберите платный план
+    databaseName: barber
+    user: barber
+
+services:
+  - type: web
+    name: barber
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    autoDeploy: true      # каждый push в GitHub — автоматический передеплой
+    envVars:
+      - key: ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: barber-db
+          property: connectionString
+      - key: ADMIN_EMAIL
+        value: admin@barber.kz
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: SEED_DEMO_DATA
+        value: "true"
+      - key: WEB_CONCURRENCY
+        value: "2"

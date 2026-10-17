@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <script>try{if(sessionStorage.getItem('bb-nav')){document.documentElement.classList.add('page-entering');sessionStorage.removeItem('bb-nav')}}catch(e){}</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0a09">
+  <meta name="description" content="Барбершопы Алматы, Астаны и Костаная: рейтинг, адреса, часы работы и онлайн-запись.">
+  <title>Барбершопы — Blind Barber</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/main.css">
+</head>
+<body>
+  <main id="main">
+    <div class="container">
+      <div class="page-head">
+        <nav class="breadcrumbs" aria-label="Навигация"><a href="/">Главная</a><span class="sep">/</span><span>Барбершопы</span></nav>
+        <h1 class="page-title">Барбершопы</h1>
+        <p class="page-sub" id="service-note">Выберите город, сравните рейтинг и запишитесь к мастеру онлайн.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="input-icon city-select">
+          <span class="sr-only">Город</span>
+          <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#pin"></use></svg>
+          <select class="select" id="city"><option value="">Все города</option></select>
+        </label>
+        <label class="input-icon">
+          <span class="sr-only">Поиск</span>
+          <svg class="icon" aria-hidden="true"><use href="/assets/img/icons/sprite.svg#search"></use></svg>
+          <input class="input" id="q" type="search" placeholder="Поиск барбершопа или адреса…">
+        </label>
+      </div>
+
+      <div class="chips" id="filters" role="group" aria-label="Фильтры">
+        <button class="chip active" data-filter="all">Все</button>
+        <button class="chip" data-filter="near">Рядом со мной</button>
+        <button class="chip" data-filter="rating">Рейтинг</button>
+        <button class="chip" data-filter="open">Открыто сейчас</button>
+        <button class="chip" data-filter="fav">Избранное</button>
+      </div>
+
+      <p class="result-count" id="count" aria-live="polite"></p>
+      <div class="shop-list" id="list"></div>
+    </div>
+  </main>
+
+  <script type="module" src="/assets/js/pages/barbershops.js"></script>
+</body>
+</html>

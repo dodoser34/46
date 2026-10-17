@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Фавикон Blind Barber: упрощённый знак (толще линии, без внутренней арки) — читается даже в 16×16 -->
+  <rect width="64" height="64" rx="14" fill="#0B0A09"/>
+  <g fill="none" stroke="#C08A5B" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 3) scale(.875)">
+    <path d="M10 61V26a22 22 0 0 1 44 0v35" stroke-width="4"/>
+    <path d="M17 34q15 15 30 0" stroke-width="4.4"/>
+    <path d="M24 39.5 22.5 44.5M32 42v6.5M40 39.5 41.5 44.5" stroke-width="4"/>
+  </g>
+  <path fill="#C08A5B" d="M32 12l1.8 4.4 4.4 1.8-4.4 1.8L32 24.4l-1.8-4.4-4.4-1.8 4.4-1.8z"/>
+</svg>

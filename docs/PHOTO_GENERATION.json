@@ -1,0 +1,1135 @@
+{
+  "tool": "built-in image_gen",
+  "source": "docs/PHOTO_PROMPTS.md",
+  "images": [
+    {
+      "path": "layers/home/bg.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "transparent": false,
+      "prompt": "Use case: photorealistic-natural. Asset type: luxury men's barbershop website hero background. Photorealistic premium editorial photography for a luxury men's barbershop brand. Dark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B), muted desaturated palette with warm brown undertones, cinematic contrast, soft film grain, shallow depth of field, shot on full-frame camera, 50mm–85mm lens, ultra detailed, sharp focus on subject. No text, no logos, no watermarks, no extra people. Wide interior of an empty upscale barbershop at night, no people. Black walls, dark wood and brass details, row of vintage mirrors with warm amber lamps, shelves with dark glass bottles, slightly out of focus (depth of field). Left half of the frame is very dark and calm (space for headline text), the right half has the warm glowing lights. Eye-level camera, straight perspective. Highest quality landscape 16:9 image, intended final dimensions 2560x1440.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e37a5109-4445-455a-ad70-fa3638c51e3e.png",
+      "bytes": 433464,
+      "generated_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "layers/home/man.png",
+      "size": [
+        1600,
+        2000
+      ],
+      "transparent": true,
+      "prompt": "Use case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nStylish bearded man about 30 years old sitting in a black leather barber chair, wearing a black barber cape, one hand running through his freshly cut textured hair, confident calm expression, looking to the right, three-quarter view, watch on wrist, tattoos on forearm. Upper body and chair visible, framed from the waist up. Warm side light from the right, rim light on hair and beard. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 1600x2000 pixels, aspect ratio 1600:2000. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-ac5f5e3a-c217-40b0-83e7-0ff1b615abf8.png",
+      "bytes": 3103643,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "layers/home/haze.png",
+      "size": [
+        2560,
+        1440
+      ],
+      "transparent": false,
+      "prompt": "Generate an abstract cinematic ATMOSPHERIC EFFECT PLATE, landscape 16:9, 2560x1440. ONLY soft thin wisps of drifting smoke with subtle warm amber light rays from upper right over PURE BLACK background. Black dominates 90% of the image. This is an empty smoke overlay for screen blending. ABSOLUTELY NO PERSON, NO FACE, NO BODY, NO CHAIR, NO INTERIOR, NO OBJECTS, NO TEXT. Only smoke and light on black. High-quality subtle photorealistic volumetric atmosphere.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-1a322e13-4de2-44c2-b0fd-ecf0d288da11.png",
+      "bytes": 1485557,
+      "generated_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "layers/shop/bg.jpg",
+      "size": [
+        2400,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Use case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nDark polished black marble pedestal/shelf in front of a dark textured wall, warm soft spotlight from the upper right, empty surface on the right two-thirds where products will be placed, left side falls into deep shadow. Product photography studio set, no products.\nHighest quality final image. Compose for 2400x1200 pixels, aspect ratio 2400:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-62aecc65-007e-463b-9011-4411744d1004.png",
+      "bytes": 329861,
+      "generated_size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "path": "layers/shop/bottle.png",
+      "size": [
+        900,
+        1600
+      ],
+      "transparent": true,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nMatte black cylindrical pump bottle of men's hair product with minimal white serif label \"HARD WAX\" and small text \"MATTE FINISH\", premium cosmetic packaging, front view, slight reflection of warm light on the edge. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 900x1600 pixels, aspect ratio 900:1600. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-cad578c1-ffb9-482b-bb12-89c67e06a7d4.png",
+      "bytes": 1306943,
+      "generated_size": [
+        940,
+        1672
+      ]
+    },
+    {
+      "path": "layers/shop/jar.png",
+      "size": [
+        1000,
+        800
+      ],
+      "transparent": true,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nLow wide matte black jar with black lid, minimal light grey label \"MATTE PASTE\", premium men's styling product, front three-quarter view, soft warm highlight. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 1000x800 pixels, aspect ratio 1000:800. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-66d41edc-c6ba-4cce-9c9e-39b38e937ed0.png",
+      "bytes": 745773,
+      "generated_size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "path": "layers/about/bg.jpg",
+      "size": [
+        2560,
+        1440
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nDark atmospheric background of a classic barbershop: blurred bokeh of warm lamps and mirrors, dark leather and wood, very dark left side, gentle warm glow on the right. No people.\nHighest quality final image. Compose for 2560x1440 pixels, aspect ratio 2560:1440. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-c0ad1637-c4de-489e-9d4e-ebf2c9c29422.png",
+      "bytes": 405983,
+      "generated_size": [
+        1672,
+        941
+      ]
+    },
+    {
+      "path": "layers/about/portrait.png",
+      "size": [
+        1400,
+        1800
+      ],
+      "transparent": true,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nDistinguished gentleman around 55 years old with neatly groomed grey beard and swept-back grey hair, wearing a dark tailored suit and white shirt, thoughtful pose with hand near chin, looking to the left, black and white feel with slight warm tone, dramatic side light. Framed from the chest up. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 1400x1800 pixels, aspect ratio 1400:1800. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-7665f262-10c1-4924-b999-4373c69fbd44.png",
+      "bytes": 2759056,
+      "generated_size": [
+        1106,
+        1422
+      ]
+    },
+    {
+      "path": "layers/booking/bg.jpg",
+      "size": [
+        1600,
+        2000
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nVertical shot of a dark luxury barbershop interior: tall mirror with warm wall lamps, marble counter, shelves with amber glass bottles, deep shadows, empty space in the lower half for a barber chair. No people.\nHighest quality final image. Compose for 1600x2000 pixels, aspect ratio 1600:2000. Single photograph, no collage. Critical: EMPTY FOREGROUND AND LOWER HALF. Zero chairs, zero stools, no furniture in lower half. Only background mirror, wall sconces, wall shelves and counter along the back wall. The chair is generated separately. No chair reflection.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-8915d53e-78af-46e8-81f2-a511e920a4fc.png",
+      "bytes": 421436,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "layers/booking/chair.png",
+      "size": [
+        1400,
+        1600
+      ],
+      "transparent": true,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nVintage black leather barber chair with chrome and dark metal details, three-quarter view, slightly worn premium leather with warm highlights. Full chair visible. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 1400x1600 pixels, aspect ratio 1400:1600. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-c89ac2b9-5903-4365-8e75-ebf8ac802701.png",
+      "bytes": 2374528,
+      "generated_size": [
+        1173,
+        1341
+      ]
+    },
+    {
+      "path": "layers/booking/tools.png",
+      "size": [
+        1200,
+        600
+      ],
+      "transparent": true,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber tools neatly laid out: steel scissors, straight razor with dark wooden handle, black comb and a shaving brush on a small dark leather tray, top-down three-quarter angle. Transparent background. Isolated subject on a fully transparent background (PNG with alpha channel), clean precise edges, no ground shadow, no background elements, lit with warm side light from the right. Entire requested subject within frame with breathing room; preserve fine hair edges.\nHighest quality final image. Compose for 1200x600 pixels, aspect ratio 1200:600. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-84d8f1dd-d15c-4ebd-9d06-5506dcf7bc59.png",
+      "bytes": 890774,
+      "generated_size": [
+        1774,
+        887
+      ]
+    },
+    {
+      "path": "about/teaser.jpg",
+      "size": [
+        1200,
+        1000
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClose-up of a barber's hands doing a precise skin fade with a clipper on a client's head, comb in other hand, dark background, warm side light, hair particles visible in the light.\nHighest quality final image. Compose for 1200x1000 pixels, aspect ratio 1200:1000. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-3ea31af4-07cc-479a-8fe3-4e0f73387009.png",
+      "bytes": 170098,
+      "generated_size": [
+        1374,
+        1145
+      ]
+    },
+    {
+      "path": "about/story.jpg",
+      "size": [
+        1500,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone image ONLY of the asset described below. Previously generated images are unrelated and must not be copied or included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nSmall cozy barbershop with a single vintage chair in early morning light, warm sun through a window, dark wood, mirrors, coffee cup on the counter � the place where the story began.\nHighest quality final image. Compose for 1500x1200 pixels, aspect ratio 1500:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-9b8521e0-a1e5-4ece-aae0-1adcf21d5330.png",
+      "bytes": 306413,
+      "generated_size": [
+        1402,
+        1122
+      ]
+    },
+    {
+      "path": "shops/the-cut-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nWide interior of \"The Cut\" barbershop: row of black leather barber chairs, large mirrors with warm round lamps, dark walls, polished concrete floor, evening atmosphere. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-f191b9fd-1683-4873-be2e-ac61c7feaf36.png",
+      "bytes": 320095,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/the-cut-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber workstation at The Cut: leather chair, mirror, marble counter with clippers, combs and products, warm lamp light. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-9d425aed-2764-48b3-91cc-0225c89d46df.png",
+      "bytes": 287791,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/the-cut-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nWaiting lounge of The Cut: leather sofa, coffee table with espresso cups and magazines, warm dim light, plants. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-48782c2e-8bde-4df3-8875-4fff80125b0b.png",
+      "bytes": 354552,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/gentlemen-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClassic English-style barbershop \"Gentlemen\": dark wood panelling, green leather details, vintage chairs, brass lamps, framed old photos on walls. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-f47a13cf-9f79-4462-b098-e642f26fc7b8.png",
+      "bytes": 283428,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/gentlemen-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nHot towel and straight razor shaving station: vintage chair reclined, steaming towels, shaving bowl and brush on wooden counter. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-2be958e4-a91c-40d4-bb1e-7df12aa6ab3d.png",
+      "bytes": 282069,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/gentlemen-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nWooden shelf with antique barber tools, shaving brushes, glass bottles of aftershave, warm brass lamp. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e7578eaa-1d32-4aff-9d10-11db0051cbe2.png",
+      "bytes": 281202,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blade-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nIndustrial modern barbershop \"Blade\": raw concrete walls, black metal frames, exposed ceiling, linear LED and warm spotlights, black chairs in a row. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-5b45b15e-41f6-4017-b4dd-e6186dc22ed1.png",
+      "bytes": 316211,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blade-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nWorkstation with black metal mirror frame, professional clippers lined up on a concrete counter, cables neatly organised, moody light. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-81882204-e1bb-4a18-ace1-7191a7938759.png",
+      "bytes": 236911,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blade-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nDetail: vinyl record player and speakers on a metal shelf next to hair products in a dark industrial barbershop. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-4d4b9f61-dbed-4dee-8f9c-1d880abab32d.png",
+      "bytes": 262275,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/chapter-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nSmall intimate barbershop \"Chapter\" with four chairs, warm wooden floor, bookshelves, soft warm lighting, calm and cozy. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-d63973c4-9d54-44c5-aeb4-74661c5d40a2.png",
+      "bytes": 307780,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/chapter-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nSingle barber chair in front of an arched mirror, small wooden console with neatly arranged tools. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-c7360270-0512-479e-90fe-5ca2d9e6c6de.png",
+      "bytes": 263840,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/chapter-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nReading corner in the barbershop: armchair, shelves with books and grooming products, warm lamp. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-8c5ba527-35bf-428e-a93e-792ada1e7933.png",
+      "bytes": 369384,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/old-fox-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nFlagship barbershop \"Old Fox\": dark wood, vintage leather chairs, long mirrors, and a small bar with bottles in the back, amber lighting. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-8bd08c33-0c37-4fcb-9f3c-ce5f41f58de4.png",
+      "bytes": 363769,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/old-fox-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBar counter inside the barbershop: crafted drinks bottles, glasses, warm backlit shelves, bokeh. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-25a3f95b-fdc2-42bf-9df3-f599d16e0b75.png",
+      "bytes": 303332,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/old-fox-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nVintage barber chair detail with brass footrest and worn leather, dramatic light. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e86c3e65-4fb3-4fb9-854f-9c7f9a1fbd1c.png",
+      "bytes": 314609,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blind-barber-1.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClassic city-centre barbershop \"Blind Barber\": black and wood interior, three chairs, big windows with evening city lights outside, warm interior lamps. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-5e024e54-bcef-47f8-98cc-0a5001f68a14.png",
+      "bytes": 362739,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blind-barber-2.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber's mirror station with clippers, trimmer, neck brush and products, warm light, shallow depth of field. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a2e6988d-7fb4-40e5-b4d9-4ebf4e1e41e0.png",
+      "bytes": 230484,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "shops/blind-barber-3.jpg",
+      "size": [
+        1600,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the asset described below. Prior generated subjects are unrelated and must not be included.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nShelf with branded black product bottles and jars (no readable text), coffee machine, warm cozy detail. No people, no readable text or signage.\nHighest quality final image. Compose for 1600x1200 pixels, aspect ratio 1600:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e1d3318d-4437-4400-a5a1-677976c958e6.png",
+      "bytes": 320639,
+      "generated_size": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "path": "services/haircut.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nSide profile of a man with a fresh classic short haircut, neat side part, dark background, monochrome warm tone. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-9be7b0c2-5904-4ca8-923e-0b0b819f1eea.png",
+      "bytes": 147913,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/haircut-beard.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nMan with fresh haircut and perfectly shaped full beard, three-quarter view, confident look, dark background. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-2ec9c8bb-540d-4a1e-8062-7f5614f55d1a.png",
+      "bytes": 135074,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/beard.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClose-up of a barber trimming and shaping a dense beard with scissors and comb, dark background. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-afa10649-490d-4f36-8727-c327abbf2ab8.png",
+      "bytes": 184542,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/fade.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBack-side view of a man's head with a perfect skin fade transitioning to textured top, crisp line-up. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-f7bfd29d-aae9-4ef2-9ee1-4c97db374d28.png",
+      "bytes": 166040,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/grey-blending.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nMature man around 45 with salt-and-pepper hair and beard naturally blended, refined look, dark background. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-411584ee-0e68-4e65-8e1d-83bdf982f703.png",
+      "bytes": 164630,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/royal-shave.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClassic straight razor shave: hot towel, shaving foam on cheek, barber's hand with razor, steam, warm light. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-182ebd9a-7a88-4448-b4a8-94f3e3b36444.png",
+      "bytes": 159446,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/kids.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBoy around 8 years old smiling in a barber chair with a neat short haircut, barber cape, warm friendly light. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-6a79216b-239f-463e-9f9b-4a8edb7425e8.png",
+      "bytes": 141238,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "services/styling.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone photograph ONLY of the subject described below. Prior generated interiors and people are unrelated and must not be included. This is an individual square service photo.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nMan's hair being styled with a comb and matte paste into a textured quiff, close-up from the side. Near monochrome photography with a slight warm tone, client close-up, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e3224dd9-6b79-424f-98d4-faecf3aae81a.png",
+      "bytes": 184607,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "masters/master-1.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nConfident barber around 32 with short textured hair and well-groomed beard, black apron, arms crossed, tattoos on forearms. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-f2fce3a3-a1a4-4c6b-9a7c-d8a58fbe07aa.png",
+      "bytes": 199221,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-2.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nYoung Kazakh barber around 25, sharp skin fade haircut, black t-shirt, holding clippers, friendly smile. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a85aa8c5-b373-4e3b-bd2d-ca628f7078bd.png",
+      "bytes": 188301,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-3.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nExperienced Central Asian barber around 38, classic side part, trimmed beard, white shirt with rolled sleeves and leather apron. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-9566a250-fe9e-4736-ac91-45323f580300.png",
+      "bytes": 192840,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-4.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber around 28 with pompadour hairstyle and light stubble, black shirt, holding a comb and scissors. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-916e7538-24ff-43bb-afab-deae1af77a24.png",
+      "bytes": 186471,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-5.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nKazakh barber around 30, modern crop haircut, short beard, black hoodie under apron, serious confident look. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-7791e8a9-583e-4fc7-b880-ea2877974f44.png",
+      "bytes": 180866,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-6.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nYoung barber around 23, curly hair on top with fade, clean-shaven, black t-shirt, warm smile. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a3f98397-23b6-4e44-9ac2-adb857e2293c.png",
+      "bytes": 197740,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-7.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nKazakh barber around 36, slicked-back hair, full well-shaped beard, dark denim apron, calm and wise look. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-1b2c903d-70cb-4566-a1b5-dbe8d28a6f2e.png",
+      "bytes": 194951,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-8.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nKazakh barber around 26, textured fringe, light moustache, black shirt, holding a hair dryer. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-5881b8b1-4ca1-437f-a90b-ba1287308447.png",
+      "bytes": 172189,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-9.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nKazakh barber around 34, short neat haircut with a touch of grey, trimmed beard, black apron over grey shirt. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-8be7928b-32d1-44ac-8374-08ef34795ba3.png",
+      "bytes": 202429,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-10.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber around 27 with medium-length swept hair, light beard, black t-shirt, tattoos, relaxed pose. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-baeb55b0-1a9c-441d-9b59-51dcfecedadd.png",
+      "bytes": 188862,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-11.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBarber around 31 with crisp fade and full beard, black apron, holding straight razor, confident. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-685464a9-631f-4879-b994-79404d8aa821.png",
+      "bytes": 182539,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "masters/master-12.jpg",
+      "size": [
+        1200,
+        1500
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW individual barber portrait with a DISTINCT fictional face matching this exact description. Do not reuse the faces or hairstyle of previously generated people. One person only, torso portrait, 4:5 composition.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nYoung Kazakh barber around 22, buzz cut with line-up, clean-shaven, black t-shirt, friendly. Individual portrait of one barber in work clothing, dark barbershop background, gaze toward camera or slightly aside. No other people.\nHighest quality final image. Compose for 1200x1500 pixels, aspect ratio 1200:1500. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-d530d079-a936-4b66-86b9-818c327d1871.png",
+      "bytes": 174461,
+      "generated_size": [
+        1122,
+        1402
+      ]
+    },
+    {
+      "path": "works/work-1.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nMid skin fade with textured crop on top, back three-quarter view. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-386f12d5-40cf-4b05-af7b-e48886c67395.png",
+      "bytes": 182715,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-2.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nClassic gentleman's side part with clean taper, side profile. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-560abc1a-ad22-45cd-b86e-78782a71e580.png",
+      "bytes": 167953,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-3.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nFull beard sculpted with sharp cheek lines and neat moustache, close-up. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a7811a8a-6e8c-40ee-997a-f506a4cbb9c6.png",
+      "bytes": 216577,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-4.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nTextured quiff with low fade, side profile. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-0f74c649-bb7f-40dc-a05d-2efa20ac94fd.png",
+      "bytes": 204933,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-5.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nBuzz cut with sharp line-up and hard part, back view. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-ea5e914f-4bae-41b6-9a51-1188f07867cc.png",
+      "bytes": 194948,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-6.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nSlicked-back undercut with shine, side profile. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-2b753f9c-5c48-4699-84aa-afede0311f2d.png",
+      "bytes": 160679,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-7.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nCurly top with drop fade, three-quarter view. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-db7233ee-5107-4506-b1ca-15d8bac5c7e5.png",
+      "bytes": 213638,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-8.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nShort French crop with blunt fringe and skin fade. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-65e0576f-be9e-4c5e-99ec-1d3c84f8513b.png",
+      "bytes": 189515,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "works/work-9.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW single square haircut portfolio photograph. Only the finished haircut/beard described below, no tools and no barber hands. Prior generated portraits are unrelated.\nUse case: photorealistic-natural. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nDark, moody low-key lighting, deep rich blacks, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo text, no logos, no watermarks, no extra people unless specified.\nGrey hair blending on a mature man, natural look, side view. Close-up photograph of the finished haircut or beard, customer in profile or without visible face, dark background.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-38de4cba-27b3-456b-83e5-8742266d9523.png",
+      "bytes": 202494,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/shampoo.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nTall matte black bottle with pump, white minimal label \"SHAMPOO � BARBER LAB � 250 ml\". Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-30381b5d-a300-4645-96a5-516275ca93d2.png",
+      "bytes": 77011,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/conditioner.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nMatte black squeeze tube standing on its cap, white label \"CONDITIONER � BARBER LAB\". Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a92effc8-edd5-41e8-87e0-576211156ffb.png",
+      "bytes": 93198,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/matte-paste.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nWide matte black jar with lid, label \"MATTE PASTE � STRONG HOLD � NATURAL FINISH � 100 ml\". Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-e1aca916-9145-4728-8066-48738864f747.png",
+      "bytes": 99976,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/hard-wax.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nMatte black jar, label \"HARD WAX � MAXIMUM HOLD\", lid slightly open showing wax texture. Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-5c6b529e-7903-4593-8496-7bee9e475bd1.png",
+      "bytes": 106731,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/texture-powder.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nSmall matte black shaker bottle, label \"TEXTURE POWDER\", some white powder scattered nearby. Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-ff06bc65-97a4-4a75-81dd-4bacf7db502e.png",
+      "bytes": 114335,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/pomade.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nRound dark brown tin with embossed lid, label \"POMADE � NORTHWOOD\", classic style. Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-c24cadc8-c79d-4917-ba6b-ba997f77003e.png",
+      "bytes": 156759,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/beard-oil.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nAmber glass dropper bottle with black cap, black label \"BEARD OIL � 30 ml\", drop of oil on the surface. Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-3e4c4e34-0c03-48df-9ab2-5624e5b33140.png",
+      "bytes": 97763,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/beard-balm.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW standalone e-commerce PRODUCT PHOTOGRAPH. Single product as specified below, centered on LIGHT WARM GREY seamless background #E4DFD7. No people, no barbershop interior, no dark background. Soft studio lighting with gentle warm highlights. Exact packaging lettering as specified.\nUse case: product-mockup. Asset type: luxury barbershop website photograph.\nPhotorealistic premium editorial photography for a luxury men's barbershop brand.\nPremium studio lighting, warm amber and copper accent light (#C08A5B),\nmuted desaturated palette with warm brown undertones, cinematic contrast, soft film grain,\nshallow depth of field, shot on full-frame camera, 50mm�85mm lens, ultra detailed, sharp focus on subject.\nNo watermarks, no extra text or logos beyond the packaging text specified below.\nSmall dark tin open showing creamy balm, label \"BEARD BALM � NORTHWOOD\". Product photography on a light warm grey seamless background (#E4DFD7), soft shadow, centered object, premium minimal black packaging with white lettering. Render the specified packaging text exactly.\nHighest quality final image. Compose for 1200x1200 pixels, aspect ratio 1200:1200. Single photograph, no collage.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-a39fb93e-08dd-457a-8383-b5867b00edf4.png",
+      "bytes": 134969,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/comb.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW minimalist product photograph: ONE SINGLE UNBRANDED BLACK CARBON BARBER COMB with fine teeth on one half and wide teeth on other half, lying diagonally on light warm grey #E4DFD7 seamless background, top-down camera. Only one comb and its soft shadow. NO BOX, NO PACKAGING, NO TEXT, NO LETTERS, NO LOGO, NO WATERMARK, NO EXTRA OBJECTS. Comb has no writing at all. Premium matte carbon finish, realistic polished product photography, warm subtle highlights, clean soft studio light. Square 1200x1200 composition, highest quality. Previous images and packaging are unrelated.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-d89ba0b3-ef5a-49c7-9d62-096cf24b7d66.png",
+      "bytes": 106245,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "path": "products/shaving-brush.jpg",
+      "size": [
+        1200,
+        1200
+      ],
+      "transparent": false,
+      "prompt": "Create a NEW minimalist product photograph: ONE SINGLE UNBRANDED SHAVING BRUSH standing upright in the center, dense dark synthetic bristles, elegant glossy BLACK RESIN HANDLE, light warm grey #E4DFD7 seamless background, soft shadow beneath brush. Only the brush. NO BOX, NO PACKAGING, NO TEXT, NO LETTERS, NO LOGO, NO WATERMARK, NO EXTRA OBJECTS. Brush handle has no writing. Premium realistic product photography, warm subtle highlights, clean soft studio light. Square 1200x1200 composition, highest quality. Previous images and packaging are unrelated.",
+      "status": "complete",
+      "original": "C:\\Users\\fgydv\\.codex\\generated_images\\01a13f84-3e12-7dd1-82d9-14d24b889da5\\exec-f5cfe804-3cc5-46cb-895e-578ef1ce5904.png",
+      "bytes": 113922,
+      "generated_size": [
+        1254,
+        1254
+      ]
+    }
+  ],
+  "validation": {
+    "total": 70,
+    "complete": 70,
+    "dimensions": "all match PHOTO_PROMPTS.md",
+    "jpeg_max_bytes": 433464,
+    "transparent_cutouts": 6,
+    "haze": "opaque black background for screen blending",
+    "total_bytes": 26573360
+  }
+}

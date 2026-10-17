@@ -1,0 +1,57 @@
+/* ---------- Многослойные сцены (фон + текст + элементы PNG) ---------- */
+.scene { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; }
+.scene--breakout { overflow: visible; }
+.scene-clip { position: absolute; inset: 0; overflow: hidden; border-radius: inherit; }
+.scene .layer { position: absolute; will-change: translate; transition: translate .25s linear; }
+.scene .layer-bg { inset: -40px; }
+.scene .layer-el {
+  z-index: 2; pointer-events: none; user-select: none; object-fit: contain;
+  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .55));
+}
+.scene .layer-el.is-missing { display: none; }
+
+/* Мягкое растворение нижнего края фигур, чтобы они не обрывались резко */
+.scene .layer-el.fade-bottom {
+  -webkit-mask-image: linear-gradient(to top, transparent 0, #000 16%);
+  mask-image: linear-gradient(to top, transparent 0, #000 16%);
+}
+
+/* Гигантская контурная надпись между фоном и фигурой */
+.scene .layer-text {
+  z-index: 2; pointer-events: none; user-select: none; white-space: nowrap; line-height: .8;
+  font-family: var(--font-display); font-weight: 600; text-transform: uppercase; letter-spacing: -.02em;
+  color: transparent; -webkit-text-stroke: 1px rgba(192, 138, 91, .35);
+}
+
+/* Порядок слоёв: фон → затемнение (::after контейнера) → надпись и фигуры → текст страницы. */
+.hero-bg::after, .promo::after, .about-hero::after, .shop-banner::after, .auth-side::after { z-index: 1; }
+.hero .container, .promo-content, .about-hero .container, .shop-banner-content, .auth-quote { z-index: 3; }
+
+/* ===== Главная: фон-интерьер → слово STYLE → мужчина в кресле → дымка ===== */
+.scene-home .el-word { right: -2%; top: 14%; font-size: clamp(160px, 22vw, 360px); }
+.scene-home .el-man { right: 3%; bottom: 0; height: 94%; max-width: 60%; object-position: right bottom; }
+.scene-home .el-haze {
+  inset: 0; width: 100%; height: 100%; object-fit: cover; filter: none; opacity: .55; mix-blend-mode: screen;
+}
+
+/* ===== Промо магазина: флакон выходит за верх блока, баночка — за нижний край ===== */
+.scene-shop .el-bottle { right: 9%; bottom: 4%; height: 118%; rotate: -6deg; }
+.scene-shop .el-jar { right: 31%; bottom: -10%; height: 40%; rotate: 8deg; }
+.scene-shop .el-word { left: 40%; bottom: -4%; font-size: clamp(110px, 14vw, 220px); -webkit-text-stroke-color: rgba(192, 138, 91, .22); }
+
+/* ===== О нас: вертикальное слово и портрет справа ===== */
+.scene-about .el-word { right: 2%; top: 8%; font-size: clamp(120px, 15vw, 240px); writing-mode: vertical-rl; rotate: 180deg; line-height: .9; }
+.scene-about .el-portrait { right: 12%; bottom: 0; height: 100%; filter: none; }
+
+/* ===== Вход: кресло по диагонали, инструменты внахлёст ===== */
+.scene-booking .el-chair { right: -8%; bottom: 6%; height: 70%; rotate: -4deg; }
+.scene-booking .el-tools { left: 6%; bottom: 26%; height: 22%; rotate: -12deg; z-index: 3; }
+
+@media (max-width: 900px) {
+  .scene-home .el-man { right: -20%; height: 76%; max-width: none; opacity: .5; }
+  .scene-home .el-word { top: auto; bottom: 26%; font-size: 150px; }
+  .scene-shop .el-bottle { right: -6%; height: 90%; opacity: .55; }
+  .scene-shop .el-jar { right: 22%; height: 28%; opacity: .55; bottom: -6%; }
+  .scene-shop .el-word, .scene-about .el-word { display: none; }
+  .scene-about .el-portrait { right: -22%; opacity: .45; }
+}
