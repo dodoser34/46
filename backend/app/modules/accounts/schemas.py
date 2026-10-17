@@ -1,7 +1,7 @@
 """Регистрация, вход, профиль."""
 from pydantic import BaseModel, EmailStr, Field, field_validator
 
-from .common import ClientName, ORM, check_phone
+from app.shared.validation import ClientName, ORM, check_phone
 
 
 class RegisterIn(BaseModel):

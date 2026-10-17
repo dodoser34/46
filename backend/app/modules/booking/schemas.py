@@ -3,7 +3,7 @@ from datetime import date as date_type
 
 from pydantic import BaseModel, Field, field_validator
 
-from .common import ClientName, check_phone
+from app.shared.validation import ClientName, check_phone
 
 
 class SlotsOut(BaseModel):

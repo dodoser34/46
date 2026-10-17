@@ -3,7 +3,7 @@ from typing import Annotated
 
 from pydantic import BaseModel, Field, StringConstraints
 
-from .common import ORM
+from app.shared.validation import ORM
 
 
 class CityOut(ORM):

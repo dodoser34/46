@@ -4,7 +4,7 @@ from datetime import date, timedelta
 
 import pytest
 
-from app import models
+from app.modules.shop.models import Order, Product
 from app.core.database import SessionLocal
 
 
@@ -15,7 +15,7 @@ def order_payload(product=1, qty=1):
 
 def stock(product=1):
     with SessionLocal() as db:
-        return db.get(models.Product, product).stock
+        return db.get(Product, product).stock
 
 
 def test_cancellation_returns_stock_once_and_reopening_reserves_again(client, admin_headers):
@@ -37,16 +37,16 @@ def test_cannot_reopen_order_when_stock_has_run_out(client, admin_headers):
     client.patch(endpoint, headers=admin_headers, json={"status": "cancelled"})
     before = stock()
     with SessionLocal() as db:
-        db.get(models.Product, 1).stock = 0
+        db.get(Product, 1).stock = 0
         db.commit()
     try:
         assert client.patch(endpoint, headers=admin_headers, json={"status": "new"}).status_code == 409
         with SessionLocal() as db:
-            assert db.get(models.Order, order['id']).status == 'cancelled'
+            assert db.get(Order, order['id']).status == 'cancelled'
         assert stock() == 0
     finally:
         with SessionLocal() as db:
-            db.get(models.Product, 1).stock = before
+            db.get(Product, 1).stock = before
             db.commit()
 
 
@@ -80,7 +80,7 @@ def test_duplicate_lines_cannot_bypass_quantity_limit(client):
 def test_concurrent_orders_cannot_sell_the_same_last_item(client):
     before = stock()
     with SessionLocal() as db:
-        db.get(models.Product, 1).stock = 1
+        db.get(Product, 1).stock = 1
         db.commit()
     try:
         with ThreadPoolExecutor(max_workers=2) as pool:
@@ -89,7 +89,7 @@ def test_concurrent_orders_cannot_sell_the_same_last_item(client):
         assert stock() == 0
     finally:
         with SessionLocal() as db:
-            db.get(models.Product, 1).stock = before
+            db.get(Product, 1).stock = before
             db.commit()
 
 

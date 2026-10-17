@@ -6,7 +6,11 @@ from sqlalchemy.orm import Session
 
 from app.core.database import get_db
 
-from .routers import admin, auth, bookings, catalog, shop
+from app.modules.accounts import routes as auth
+from app.modules.administration import routes as admin
+from app.modules.booking import routes as bookings
+from app.modules.catalog import routes as catalog
+from app.modules.shop import routes as shop
 
 api_router = APIRouter()
 for _module in (auth, catalog, bookings, shop, admin):

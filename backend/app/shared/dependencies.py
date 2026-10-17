@@ -6,7 +6,8 @@ from sqlalchemy.orm import Session
 
 from app.core.config import settings
 from app.core.database import get_db
-from app.models import AuthToken, User
+from app.modules.accounts.models import AuthToken
+from app.modules.accounts.models import User
 
 __all__ = ["get_db", "get_optional_user", "get_current_user", "get_admin"]
 

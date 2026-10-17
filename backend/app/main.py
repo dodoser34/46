@@ -14,10 +14,11 @@ from fastapi.responses import FileResponse
 from fastapi.exception_handlers import http_exception_handler
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
-from app.api import api_router
+from app.routing import api_router
 from app.core.config import settings
 from app.core.database import Base, SessionLocal, engine
 from app.seed import seed
+from app.modules import register_models
 
 logging.basicConfig(level=logging.DEBUG if settings.debug else logging.INFO,
                     format="%(asctime)s %(levelname)s %(name)s: %(message)s")
@@ -26,6 +27,7 @@ log = logging.getLogger("barber")
 
 def init_db() -> None:
     """Создать таблицы (если их нет) и при необходимости заполнить демо-данными."""
+    register_models()
     Base.metadata.create_all(engine)
     if settings.seed_demo_data:
         with SessionLocal() as db:

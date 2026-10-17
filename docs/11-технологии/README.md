@@ -19,7 +19,7 @@
 | HTML | Браузер | Содержание и структура страницы | [login.html](../../frontend/pages/login.html) |
 | CSS | Браузер | Внешний вид и расположение элементов | [base.css](../../frontend/assets/css/base.css) |
 | JavaScript | Браузер | Действия пользователя, запросы, обновление страницы | [login.js](../../frontend/assets/js/pages/login.js) |
-| Python | Сервер | Правила работы, проверка данных, доступ к базе | [auth.py](../../backend/app/api/routers/auth.py) |
+| Python | Сервер | Правила работы, проверка данных, доступ к базе | [auth.py](../../backend/app/modules/accounts/routes.py) |
 | SQL / SQLite | Сервер | Хранение пользователей, записей, заказов | [database.py](../../backend/app/core/database.py) |
 
 HTML — язык разметки, CSS — язык описания стилей. JavaScript и Python — языки программирования. SQL — язык запросов к базе. Эти названия не взаимозаменяемы.

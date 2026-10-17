@@ -9,7 +9,7 @@
 
 Значок 🔒 — нужен вход в аккаунт, 👑 — только администратор.
 
-## Авторизация — `api/routers/auth.py`
+## Авторизация — `modules/accounts/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|
@@ -19,7 +19,7 @@
 | GET 🔒 | `/api/auth/me` | Данные текущего пользователя |
 | PATCH 🔒 | `/api/auth/me` | Изменить имя и телефон |
 
-## Каталог — `api/routers/catalog.py`
+## Каталог — `modules/catalog/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|
@@ -35,7 +35,7 @@
 | GET | `/api/masters/{id}/reviews` | Отзывы о мастере |
 | POST | `/api/subscribe` | Подписка на новости по email |
 
-## Запись — `api/routers/bookings.py`
+## Запись — `modules/booking/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|
@@ -44,7 +44,7 @@
 | GET 🔒 | `/api/me/bookings` | Мои записи |
 | POST 🔒 | `/api/me/bookings/{id}/cancel` | Отменить свою запись |
 
-## Магазин — `api/routers/shop.py`
+## Магазин — `modules/shop/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|
@@ -54,7 +54,7 @@
 | POST | `/api/orders` | Оформить заказ |
 | GET 🔒 | `/api/me/orders` | Мои заказы |
 
-## Администратор — `api/routers/admin.py`
+## Администратор — `modules/administration/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|

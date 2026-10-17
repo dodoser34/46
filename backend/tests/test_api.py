@@ -169,12 +169,13 @@ def test_login_rate_limit(client):
 def test_expired_token_is_rejected(client):
     from datetime import datetime, timedelta
 
-    from app import models
+    from app.modules.accounts.models import AuthToken
+    from app.modules.booking.models import Booking
     from app.core.database import SessionLocal
 
     token = client.post("/api/auth/login", json={"email": "demo@barber.kz", "password": "demo123"}).json()["token"]
     with SessionLocal() as db:
-        row = db.get(models.AuthToken, token)
+        row = db.get(AuthToken, token)
         row.created_at = datetime.now() - timedelta(days=365)
         db.commit()
     assert client.get("/api/auth/me", headers={"Authorization": f"Bearer {token}"}).status_code == 401
@@ -185,18 +186,19 @@ def test_database_blocks_duplicate_active_slot():
     import pytest
     from sqlalchemy.exc import IntegrityError
 
-    from app import models
+    from app.modules.accounts.models import AuthToken
+    from app.modules.booking.models import Booking
     from app.core.database import SessionLocal
 
     day = (date.today() + timedelta(days=5)).isoformat()
     base = dict(barbershop_id=1, master_id=1, service_id=1, date=day, time="10:00", duration=60,
                 price=12000, client_name="Тест", client_phone="+7 700 000 00 00")
     with SessionLocal() as db:
-        db.add(models.Booking(**base, status="new"))
+        db.add(Booking(**base, status="new"))
         db.commit()
-        db.add(models.Booking(**base, status="cancelled"))  # отменённая не мешает
+        db.add(Booking(**base, status="cancelled"))  # отменённая не мешает
         db.commit()
-        db.add(models.Booking(**base, status="confirmed"))
+        db.add(Booking(**base, status="confirmed"))
         with pytest.raises(IntegrityError):
             db.commit()
         db.rollback()

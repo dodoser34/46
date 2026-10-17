@@ -6,8 +6,11 @@ from sqlalchemy import select, update
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.orm import Session
 
-from app import models, schemas
-from app.services.serializers import from_minutes, to_minutes
+from app.modules.accounts.models import User
+from app.modules.booking.models import Booking
+from app.modules.catalog.models import Barbershop, Master, Service
+from app.modules.booking.schemas import BookingIn
+from app.shared.presentation import from_minutes, to_minutes
 
 SLOT_STEP = 60          # шаг сетки времени, минут
 BOOKING_HORIZON = 30    # на сколько дней вперёд можно записаться
@@ -15,7 +18,7 @@ MIN_LEAD_MINUTES = 15   # минимальный запас до начала з
 ACTIVE_STATUSES = ("new", "confirmed")
 
 
-def compute_slots(db: Session, master: models.Master, day: date, duration: int,
+def compute_slots(db: Session, master: Master, day: date, duration: int,
                   now: datetime | None = None, exclude_booking_id: int | None = None) -> list[dict]:
     """Сетка слотов мастера на день с признаком доступности.
 
@@ -28,11 +31,11 @@ def compute_slots(db: Session, master: models.Master, day: date, duration: int,
 
     busy = [
         (to_minutes(b.time), to_minutes(b.time) + b.duration)
-        for b in db.scalars(select(models.Booking).where(
-            models.Booking.master_id == master.id,
-            models.Booking.date == day.isoformat(),
-            models.Booking.status.in_(ACTIVE_STATUSES),
-            models.Booking.id != exclude_booking_id if exclude_booking_id is not None else True,
+        for b in db.scalars(select(Booking).where(
+            Booking.master_id == master.id,
+            Booking.date == day.isoformat(),
+            Booking.status.in_(ACTIVE_STATUSES),
+            Booking.id != exclude_booking_id if exclude_booking_id is not None else True,
         ))
     ]
 
@@ -57,11 +60,11 @@ def check_day(day: date) -> None:
                             f"Запись доступна на ближайшие {BOOKING_HORIZON} дней")
 
 
-def create_booking(db: Session, data: schemas.BookingIn, user: models.User | None) -> models.Booking:
+def create_booking(db: Session, data: BookingIn, user: User | None) -> Booking:
     lock_master(db, data.master_id)
-    shop = db.get(models.Barbershop, data.barbershop_id)
-    master = db.get(models.Master, data.master_id)
-    service = db.get(models.Service, data.service_id)
+    shop = db.get(Barbershop, data.barbershop_id)
+    master = db.get(Master, data.master_id)
+    service = db.get(Service, data.service_id)
     if not shop or not master or not service:
         raise HTTPException(status.HTTP_404_NOT_FOUND, "Барбершоп, мастер или услуга не найдены")
     if master.barbershop_id != shop.id:
@@ -75,7 +78,7 @@ def create_booking(db: Session, data: schemas.BookingIn, user: models.User | Non
     if not slot["available"]:
         raise HTTPException(status.HTTP_409_CONFLICT, "Это время уже занято, выберите другое")
 
-    booking = models.Booking(
+    booking = Booking(
         user_id=user.id if user else None,
         barbershop_id=shop.id, master_id=master.id, service_id=service.id,
         date=data.date.isoformat(), time=data.time,
@@ -97,11 +100,11 @@ def create_booking(db: Session, data: schemas.BookingIn, user: models.User | Non
 def lock_master(db: Session, master_id: int) -> None:
     # UPDATE берёт блокировку до чтения слотов: в SQLite — записи, в PostgreSQL — строки.
     # Это защищает и пересекающиеся услуги с разным временем начала.
-    db.execute(update(models.Master).where(models.Master.id == master_id)
-               .values(id=models.Master.id))
+    db.execute(update(Master).where(Master.id == master_id)
+               .values(id=Master.id))
 
 
-def restore_booking(db: Session, booking: models.Booking) -> None:
+def restore_booking(db: Session, booking: Booking) -> None:
     lock_master(db, booking.master_id)
     day = date.fromisoformat(booking.date)
     check_day(day)

@@ -33,11 +33,10 @@ if quantity > 0:
 | [main.py](../../backend/app/main.py) | Создание приложения, middleware, запуск и подключение маршрутов |
 | [core/config.py](../../backend/app/core/config.py) | Настройки из окружения и `.env` |
 | [core/database.py](../../backend/app/core/database.py) | Engine, сессии и подключение к базе |
-| [api/routers](../../backend/app/api/routers/) | Адреса API по разделам |
-| [api/deps.py](../../backend/app/api/deps.py) | Текущий пользователь, администратор и сессия БД |
-| [schemas](../../backend/app/schemas/) | Входные и выходные структуры Pydantic |
-| [models](../../backend/app/models/) | Таблицы SQLAlchemy и связи |
-| [services](../../backend/app/services/) | Правила записи, заказов и подготовка ответов |
+| [routing.py](../../backend/app/routing.py) | Подключение HTTP-маршрутов предметных модулей |
+| [shared/dependencies.py](../../backend/app/shared/dependencies.py) | Текущий пользователь, администратор и сессия БД |
+| [modules](../../backend/app/modules/) | В каждом модуле: маршруты, схемы и таблицы; у записи и магазина также сервис |
+| [shared/presentation.py](../../backend/app/shared/presentation.py) | Преобразование данных в ответы API |
 | [seed](../../backend/app/seed/) | Начальные демонстрационные данные |
 | [manage.py](../../backend/app/manage.py) | Команды обслуживания: база, администратор, пароль, резервная копия |
 
@@ -45,12 +44,12 @@ if quantity > 0:
 
 ## FastAPI: адрес связывается с функцией
 
-Фрагмент из [routers/shop.py](../../backend/app/api/routers/shop.py):
+Фрагмент из [modules/shop/routes.py](../../backend/app/modules/shop/routes.py):
 
 ```python
-@router.post("/orders", response_model=schemas.OrderOut, status_code=201)
-def create_order(data: schemas.OrderIn, db: Session = Depends(get_db),
-                 user: models.User | None = Depends(get_optional_user)):
+@router.post("/orders", response_model=OrderOut, status_code=201)
+def create_order(data: OrderIn, db: Session = Depends(get_db),
+                 user: User | None = Depends(get_optional_user)):
     return ser.order(order_service.create_order(db, data, user))
 ```
 
@@ -60,7 +59,7 @@ def create_order(data: schemas.OrderIn, db: Session = Depends(get_db),
 
 ## Pydantic: проверка входа
 
-Фрагмент схемы заказа из [schemas/shop.py](../../backend/app/schemas/shop.py):
+Фрагмент схемы заказа из [modules/shop/schemas.py](../../backend/app/modules/shop/schemas.py):
 
 ```python
 class OrderItemIn(BaseModel):
@@ -74,7 +73,7 @@ class OrderItemIn(BaseModel):
 
 ## SQLAlchemy и база данных
 
-`models.Product` описывает таблицу `products`: id, название, цену, остаток и другие поля. Связи `relationship()` позволяют, например, получить позиции через `order.items`.
+`Product` описывает таблицу `products`: id, название, цену, остаток и другие поля. Связи `relationship()` позволяют, например, получить позиции через `order.items`.
 
 `Session` — рабочая сессия обращения к базе. `db.get(Model, id)` ищет запись по первичному ключу, `select(Model)` строит запрос, `db.add()` добавляет объект, `db.commit()` фиксирует транзакцию, `db.rollback()` отменяет её незавершённые изменения.
 
@@ -84,17 +83,17 @@ class OrderItemIn(BaseModel):
 
 ## Защита от конкурирующих операций
 
-Два покупателя могут одновременно заказать последнюю единицу товара. В [order_service.py](../../backend/app/services/order_service.py) остаток уменьшается условным SQL UPDATE:
+Два покупателя могут одновременно заказать последнюю единицу товара. В [modules/shop/service.py](../../backend/app/modules/shop/service.py) остаток уменьшается условным SQL UPDATE:
 
 ```python
-reserved = db.execute(update(models.Product).where(
-    models.Product.id == product_id, models.Product.stock >= qty,
-).values(stock=models.Product.stock - qty).execution_options(synchronize_session=False))
+reserved = db.execute(update(Product).where(
+    Product.id == product_id, Product.stock >= qty,
+).values(stock=Product.stock - qty).execution_options(synchronize_session=False))
 ```
 
 Если изменена не одна строка, товар не удалось зарезервировать. Сервер откатывает транзакцию и возвращает конфликт. При отмене заказа товар возвращается на склад один раз; восстановление отменённого заказа требует повторного резервирования.
 
-Для записи [booking_service.py](../../backend/app/services/booking_service.py) сначала блокирует изменения по выбранному мастеру, затем проверяет пересечение интервалов. Услуга на 90 минут в 10:00 занимает и начало слота в 11:00. Уникальный индекс дополнительно запрещает одинаковые начала активных записей. Восстановление отменённой записи тоже проверяет занятость на всю её продолжительность.
+Для записи [modules/booking/service.py](../../backend/app/modules/booking/service.py) сначала блокирует изменения по выбранному мастеру, затем проверяет пересечение интервалов. Услуга на 90 минут в 10:00 занимает и начало слота в 11:00. Уникальный индекс дополнительно запрещает одинаковые начала активных записей. Восстановление отменённой записи тоже проверяет занятость на всю её продолжительность.
 
 ## Вход и права
 

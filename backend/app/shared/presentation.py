@@ -2,7 +2,9 @@
 import math
 from datetime import datetime
 
-from app import models
+from app.modules.booking.models import Booking
+from app.modules.catalog.models import Barbershop, Master, Review
+from app.modules.shop.models import Order, Product
 
 
 def split_list(value: str) -> list[str]:
@@ -18,7 +20,7 @@ def from_minutes(total: int) -> str:
     return f"{total // 60:02d}:{total % 60:02d}"
 
 
-def is_open_now(shop: models.Barbershop, now: datetime | None = None) -> bool:
+def is_open_now(shop: Barbershop, now: datetime | None = None) -> bool:
     now = now or datetime.now()
     current = now.hour * 60 + now.minute
     return to_minutes(shop.open_time) <= current < to_minutes(shop.close_time)
@@ -33,7 +35,7 @@ def distance_km(lat1: float, lng1: float, lat2: float, lng2: float) -> float:
     return round(2 * r * math.asin(math.sqrt(a)), 1)
 
 
-def master_short(m: models.Master) -> dict:
+def master_short(m: Master) -> dict:
     return {
         "id": m.id,
         "name": m.name,
@@ -46,7 +48,7 @@ def master_short(m: models.Master) -> dict:
     }
 
 
-def master_full(m: models.Master) -> dict:
+def master_full(m: Master) -> dict:
     return {
         **master_short(m),
         "bio": m.bio,
@@ -57,7 +59,7 @@ def master_full(m: models.Master) -> dict:
     }
 
 
-def barbershop_short(shop: models.Barbershop, favorites: set[int] | None = None,
+def barbershop_short(shop: Barbershop, favorites: set[int] | None = None,
                      origin: tuple[float, float] | None = None) -> dict:
     images = split_list(shop.images)
     return {
@@ -77,7 +79,7 @@ def barbershop_short(shop: models.Barbershop, favorites: set[int] | None = None,
     }
 
 
-def barbershop_full(shop: models.Barbershop, favorites: set[int] | None = None) -> dict:
+def barbershop_full(shop: Barbershop, favorites: set[int] | None = None) -> dict:
     return {
         **barbershop_short(shop, favorites),
         "phone": shop.phone,
@@ -89,7 +91,7 @@ def barbershop_full(shop: models.Barbershop, favorites: set[int] | None = None) 
     }
 
 
-def review(r: models.Review) -> dict:
+def review(r: Review) -> dict:
     return {
         "id": r.id,
         "author": r.author,
@@ -100,7 +102,7 @@ def review(r: models.Review) -> dict:
     }
 
 
-def booking(b: models.Booking) -> dict:
+def booking(b: Booking) -> dict:
     return {
         "id": b.id,
         "barbershop": b.barbershop.name,
@@ -121,7 +123,7 @@ def booking(b: models.Booking) -> dict:
     }
 
 
-def product(p: models.Product) -> dict:
+def product(p: Product) -> dict:
     return {
         "id": p.id,
         "name": p.name,
@@ -141,7 +143,7 @@ def product(p: models.Product) -> dict:
     }
 
 
-def order(o: models.Order) -> dict:
+def order(o: Order) -> dict:
     return {
         "id": o.id,
         "client_name": o.client_name,

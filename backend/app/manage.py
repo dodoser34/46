@@ -14,10 +14,13 @@ from pathlib import Path
 
 from sqlalchemy import select, text
 
-from app import models
+from app.modules.accounts.models import AuthToken, User
 from app.core.config import settings
 from app.core.database import SessionLocal, engine
 from app.core.security import hash_password
+from app.modules import register_models
+
+register_models()
 
 
 def cmd_init_db(_: argparse.Namespace) -> None:
@@ -32,13 +35,13 @@ def cmd_create_admin(args: argparse.Namespace) -> None:
     if len(args.password) < 8:
         sys.exit("Пароль администратора должен быть не короче 8 символов")
     with SessionLocal() as db:
-        user = db.scalar(select(models.User).where(models.User.email == args.email.lower()))
+        user = db.scalar(select(User).where(User.email == args.email.lower()))
         if user:
             user.is_admin = True
             user.password_hash = hash_password(args.password)
             action = "обновлён и назначен администратором"
         else:
-            user = models.User(name=args.name, email=args.email.lower(), phone="",
+            user = User(name=args.name, email=args.email.lower(), phone="",
                                password_hash=hash_password(args.password), is_admin=True)
             db.add(user)
             action = "создан"
@@ -48,12 +51,12 @@ def cmd_create_admin(args: argparse.Namespace) -> None:
 
 def cmd_set_password(args: argparse.Namespace) -> None:
     with SessionLocal() as db:
-        user = db.scalar(select(models.User).where(models.User.email == args.email.lower()))
+        user = db.scalar(select(User).where(User.email == args.email.lower()))
         if not user:
             sys.exit(f"Пользователь {args.email} не найден")
         user.password_hash = hash_password(args.password)
         # Выходим со всех устройств: старые токены больше не действуют.
-        for token in db.scalars(select(models.AuthToken).where(models.AuthToken.user_id == user.id)):
+        for token in db.scalars(select(AuthToken).where(AuthToken.user_id == user.id)):
             db.delete(token)
         db.commit()
     print(f"Пароль для {args.email} изменён, все старые входы сброшены")

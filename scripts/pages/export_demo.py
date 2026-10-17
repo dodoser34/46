@@ -32,10 +32,16 @@ def export_demo(output: Path) -> dict:
         sys.modules["app.core.config"] = config
 
         from sqlalchemy import select
-        from app import models, schemas
+        from app.modules.accounts.models import User
+        from app.modules.booking.models import Booking
+        from app.modules.catalog.models import Barbershop, City, Master, Review, Service
+        from app.modules.shop.models import Product, ProductCategory
+        from app.modules.accounts.schemas import UserOut
+        from app.modules.catalog.schemas import CityOut, ServiceOut
+        from app.modules.shop.schemas import CategoryOut
         from app.core.database import Base, SessionLocal, engine
         from app.seed.seed import seed
-        from app.services import serializers as ser
+        from app.shared import presentation as ser
 
         try:
             Base.metadata.create_all(engine)
@@ -45,25 +51,25 @@ def export_demo(output: Path) -> dict:
                 payload = {
                     "version": 1,
                     "notice": "Public browser-only demo. No real bookings, orders, payments or messages.",
-                    "cities": [schemas.CityOut.model_validate(c).model_dump() for c in rows(models.City)],
-                    "services": [schemas.ServiceOut.model_validate(s).model_dump() for s in rows(models.Service)],
+                    "cities": [CityOut.model_validate(c).model_dump() for c in rows(City)],
+                    "services": [ServiceOut.model_validate(s).model_dump() for s in rows(Service)],
                     "barbershops": [
-                        {**ser.barbershop_full(s), "city_slug": s.city.slug} for s in rows(models.Barbershop)
+                        {**ser.barbershop_full(s), "city_slug": s.city.slug} for s in rows(Barbershop)
                     ],
-                    "masters": [ser.master_full(m) for m in rows(models.Master)],
-                    "reviews": [{**ser.review(r), "barbershop_id": r.barbershop_id} for r in rows(models.Review)],
-                    "categories": [schemas.CategoryOut.model_validate(c).model_dump()
-                                   for c in rows(models.ProductCategory)],
-                    "products": [{**ser.product(p), "stock": p.stock} for p in rows(models.Product)],
+                    "masters": [ser.master_full(m) for m in rows(Master)],
+                    "reviews": [{**ser.review(r), "barbershop_id": r.barbershop_id} for r in rows(Review)],
+                    "categories": [CategoryOut.model_validate(c).model_dump()
+                                   for c in rows(ProductCategory)],
+                    "products": [{**ser.product(p), "stock": p.stock} for p in rows(Product)],
                     "users": [
-                        {**schemas.UserOut.model_validate(u).model_dump(),
+                        {**UserOut.model_validate(u).model_dump(),
                          "password": "admin123" if u.is_admin else "demo123"}
-                        for u in rows(models.User)
+                        for u in rows(User)
                     ],
                     "bookings": [
                         {**ser.booking(b), "user_id": b.user_id, "service_id": b.service_id,
                          "date_offset": (date.fromisoformat(b.date) - date.today()).days}
-                        for b in rows(models.Booking)
+                        for b in rows(Booking)
                     ],
                     "orders": [],
                 }
