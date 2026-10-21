@@ -47,7 +47,7 @@ def test_entry_points_from_their_own_folders(mode, tmp_path):
     with (tmp_path / "servers.log").open("w+b") as log:
         try:
             for cwd, entry in commands:
-                processes.append(subprocess.Popen(["cmd", "/d", "/c", entry, *ports], cwd=cwd,
+                processes.append(subprocess.Popen(["cmd", "/d", "/c", str(cwd / entry), *ports], cwd=cwd,
                     env=env, stdin=subprocess.DEVNULL, stdout=log, stderr=log))
             api = f"http://127.0.0.1:{backend_port}"
             site = f"http://127.0.0.1:{frontend_port}"

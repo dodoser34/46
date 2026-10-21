@@ -213,9 +213,26 @@ function initCursor() {
   let ry = y;
   let visible = false;
 
+  let frame = null;
+
+  // Кольцо догоняет курсор и останавливается: пока мышь стоит, кадры не расходуются.
+  const loop = () => {
+    rx += (x - rx) * 0.18;
+    ry += (y - ry) * 0.18;
+    if (Math.abs(x - rx) < 0.1 && Math.abs(y - ry) < 0.1) {
+      rx = x;
+      ry = y;
+      frame = null;
+    } else {
+      frame = requestAnimationFrame(loop);
+    }
+    ring.style.transform = `translate3d(${rx.toFixed(1)}px, ${ry.toFixed(1)}px, 0)`;
+  };
+
   document.addEventListener('pointermove', (e) => {
     x = e.clientX;
     y = e.clientY;
+    if (!frame) frame = requestAnimationFrame(loop);
     if (!visible) {
       visible = true;
       rx = x;
@@ -234,14 +251,6 @@ function initCursor() {
     visible = false;
     ring.classList.remove('on');
   });
-
-  const loop = () => {
-    rx += (x - rx) * 0.18;
-    ry += (y - ry) * 0.18;
-    ring.style.transform = `translate3d(${rx.toFixed(1)}px, ${ry.toFixed(1)}px, 0)`;
-    requestAnimationFrame(loop);
-  };
-  loop();
 }
 
 // ---------- Волна при нажатии ----------

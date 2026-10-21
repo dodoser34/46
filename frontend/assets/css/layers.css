@@ -6,7 +6,6 @@
 .scene .layer-bg { inset: -40px; }
 .scene .layer-el {
   z-index: 2; pointer-events: none; user-select: none; object-fit: contain;
-  filter: drop-shadow(0 30px 40px rgba(0, 0, 0, .55));
 }
 .scene .layer-el.is-missing { display: none; }
 
@@ -31,7 +30,7 @@
 .scene-home .el-word { right: -2%; top: 14%; font-size: clamp(160px, 22vw, 360px); }
 .scene-home .el-man { right: 3%; bottom: 0; height: 94%; max-width: 60%; object-position: right bottom; }
 .scene-home .el-haze {
-  inset: 0; width: 100%; height: 100%; object-fit: cover; filter: none; opacity: .55; mix-blend-mode: screen;
+  inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .55;
 }
 
 /* ===== Промо магазина: флакон выходит за верх блока, баночка — за нижний край ===== */
@@ -41,7 +40,7 @@
 
 /* ===== О нас: вертикальное слово и портрет справа ===== */
 .scene-about .el-word { right: 2%; top: 8%; font-size: clamp(120px, 15vw, 240px); writing-mode: vertical-rl; rotate: 180deg; line-height: .9; }
-.scene-about .el-portrait { right: 12%; bottom: 0; height: 100%; filter: none; }
+.scene-about .el-portrait { right: 12%; bottom: 0; height: 100%; }
 
 /* ===== Вход: кресло по диагонали, инструменты внахлёст ===== */
 .scene-booking .el-chair { right: -8%; bottom: 6%; height: 70%; rotate: -4deg; }

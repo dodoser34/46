@@ -11,13 +11,13 @@ initLayout({ active: 'home', transparent: true });
 
 document.querySelector('[data-scene-slot="home"]').innerHTML = layeredScene('home', [
   { text: 'Style', cls: 'el-word', depth: 0.02 },
-  { file: 'man.png', cls: 'el-man fade-bottom', depth: 0.05, alt: 'Мужчина в барбер-кресле' },
-  { file: 'haze.png', cls: 'el-haze', depth: 0.09 },
+  { file: 'man.webp', cls: 'el-man fade-bottom', depth: 0.05, alt: 'Мужчина в барбер-кресле' },
+  { file: 'haze.webp', cls: 'el-haze', depth: 0.09 },
 ], { alt: 'Интерьер барбершопа' });
 document.querySelector('[data-scene-slot="shop"]').innerHTML = layeredScene('shop', [
   { text: 'Care', cls: 'el-word', depth: 0.02 },
-  { file: 'jar.png', cls: 'el-jar', depth: 0.03, alt: 'Баночка матовой пасты' },
-  { file: 'bottle.png', cls: 'el-bottle', depth: 0.06, alt: 'Флакон Hard Wax' },
+  { file: 'jar.webp', cls: 'el-jar', depth: 0.03, alt: 'Баночка матовой пасты' },
+  { file: 'bottle.webp', cls: 'el-bottle', depth: 0.06, alt: 'Флакон Hard Wax' },
 ], { breakout: true });
 initScenes();
 

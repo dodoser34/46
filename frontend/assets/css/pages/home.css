@@ -15,8 +15,8 @@
 
 .search-bar {
   margin-top: 40px; display: flex; align-items: center; max-width: 620px;
-  background: rgba(21, 19, 17, .75); border: 1px solid var(--border-strong); border-radius: 16px;
-  padding: 7px; backdrop-filter: blur(10px);
+  background: rgba(21, 19, 17, .9); border: 1px solid var(--border-strong); border-radius: 16px;
+  padding: 7px;
 }
 .search-bar .input-icon { flex: 1; }
 .search-bar .select { background-color: transparent; border: 0; min-height: 52px; }

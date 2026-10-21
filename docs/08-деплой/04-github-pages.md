@@ -1,15 +1,17 @@
 # Демо на GitHub Pages
 
-Репозиторий: [dodoser34/50](https://github.com/dodoser34/50). Ожидаемый адрес после успешной публикации: **https://dodoser34.github.io/50/**.
+Адрес сайта после публикации строится так: **https://ЛОГИН.github.io/РЕПОЗИТОРИЙ/**.
+Например, для пользователя `barber-student` и репозитория `blind-barber` это `https://barber-student.github.io/blind-barber/`.
+Ниже в примерах имя репозитория — `blind-barber`; подставьте своё.
 
 ## Что сделать на GitHub один раз
 
 1. Добавьте подготовленные файлы проекта в свой репозиторий и сделайте commit / push в `main` или `master`.
 2. Откройте репозиторий → **Settings → Pages**.
-3. В **Build and deployment → Source** выберите **GitHub Actions**. Не выбирайте публикацию исходной папки frontend напрямую: ей нужна сборка для пути `/50/`.
+3. В **Build and deployment → Source** выберите **GitHub Actions**. Не выбирайте публикацию исходной папки frontend напрямую: ей нужна сборка для пути `/РЕПОЗИТОРИЙ/`.
 4. Откройте **Actions → Deploy demo to GitHub Pages**. Если первый запуск был до настройки Pages и завершился ошибкой, нажмите **Re-run all jobs**, либо **Run workflow**.
 5. Дождитесь зелёного результата обоих заданий `build` и `deploy`.
-6. Откройте ссылку из deployment или https://dodoser34.github.io/50/.
+6. Откройте ссылку из deployment или `https://ЛОГИН.github.io/РЕПОЗИТОРИЙ/`.
 
 Workflow находится в [pages.yml](../../.github/workflows/pages.yml). Он устанавливает библиотеки, выполняет тесты, собирает статические файлы и публикует только `dist/pages`. Обновления основной ветки автоматически запускают новую публикацию. Токен вручную вводить не требуется: workflow использует стандартные разрешения GitHub Actions.
 
@@ -36,11 +38,11 @@ GitHub Pages размещает HTML, CSS и JavaScript и **не запуска
 Из корня проекта, после установки Python-зависимостей:
 
 ```powershell
-.\backend\.venv\Scripts\python.exe scripts/pages/build.py --base-path /50/ --output dist/preview/50
+.\backend\.venv\Scripts\python.exe scripts/pages/build.py --base-path /blind-barber/ --output dist/preview/blind-barber
 .\backend\.venv\Scripts\python.exe -m http.server 5600 --bind 127.0.0.1 --directory dist/preview
 ```
 
-Откройте **http://localhost:5600/50/**. Для этой проверки Python используется как простой сервер файлов, FastAPI не запускается. Такой адрес проверяет тот же префикс `/50/`, что и реальный GitHub Pages.
+Откройте **http://localhost:5600/blind-barber/**. Для этой проверки Python используется как простой сервер файлов, FastAPI не запускается. Такой адрес проверяет тот же префикс, что и реальный GitHub Pages.
 
 ## Частые ошибки
 
@@ -49,8 +51,8 @@ GitHub Pages размещает HTML, CSS и JavaScript и **не запуска
 | Страница GitHub 404 сразу после push | Дождитесь успешного `deploy`, проверьте Source = GitHub Actions |
 | Workflow пишет, что Pages не настроен | Settings → Pages → Source = GitHub Actions, затем повторить запуск |
 | Нет workflow во вкладке Actions | Убедитесь, что `.github/workflows/pages.yml` попал в коммит основной ветки |
-| Сайт пытается загрузить `/assets/` вместо `/50/assets/` | Публикуйте результат builder, а не исходную frontend-папку |
+| Сайт пытается загрузить `/assets/` вместо `/РЕПОЗИТОРИЙ/assets/` | Публикуйте результат builder, а не исходную frontend-папку |
 | Заказ не появился в другом браузере | Это браузерное демо: состояние хранится локально. Для общей базы используйте Python-версию на серверном хостинге |
 | Нужно начать демонстрацию заново | Кнопка «Сбросить демо» внизу страницы |
 
-Наличие этих файлов означает готовность публикации. Факт размещения подтверждается только успешным запуском Actions и открытием готового сайта; сам commit / push выполняет владелец репозитория.
+Сайт опубликован, когда в Actions оба задания зелёные и ссылка открывается в браузере.

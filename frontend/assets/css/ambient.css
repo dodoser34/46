@@ -2,8 +2,10 @@
    Живой фон всего сайта (только CSS, без изображений)
    1) тёплые пятна света медленно плавают;
    2) тонкие вертикальные линии «редакционной» сетки;
-   3) лёгкое зерно плёнки, которое едва заметно мерцает.
+   3) лёгкое зерно плёнки.
    Слои лежат под контентом (z-index: -1) и не перехватывают клики.
+   Для скорости: без filter: blur (градиенты и так мягкие), двигается только transform,
+   зерно неподвижно — иначе браузер перерисовывал бы весь экран на каждом кадре.
    ========================================================= */
 
 body::before,
@@ -18,11 +20,10 @@ body::after {
 body::before {
   inset: -25%;
   background:
-    radial-gradient(28% 24% at 22% 28%, rgba(192, 138, 91, .11), transparent 70%),
-    radial-gradient(26% 22% at 78% 66%, rgba(160, 104, 62, .09), transparent 70%),
-    radial-gradient(22% 20% at 58% 18%, rgba(242, 236, 227, .035), transparent 70%),
-    radial-gradient(30% 26% at 35% 85%, rgba(120, 80, 50, .07), transparent 70%);
-  filter: blur(30px);
+    radial-gradient(34% 30% at 22% 28%, rgba(192, 138, 91, .11), transparent),
+    radial-gradient(32% 28% at 78% 66%, rgba(160, 104, 62, .09), transparent),
+    radial-gradient(28% 26% at 58% 18%, rgba(242, 236, 227, .035), transparent),
+    radial-gradient(36% 32% at 35% 85%, rgba(120, 80, 50, .07), transparent);
   animation: ambient-drift 48s ease-in-out infinite alternate;
   will-change: transform;
 }
@@ -37,7 +38,6 @@ body::after {
     linear-gradient(90deg, transparent calc(75% - .5px), rgba(242, 236, 227, .2) 75%, transparent calc(75% + .5px));
   background-size: 180px 180px, 100% 100%, 100% 100%, 100% 100%;
   opacity: .16;
-  animation: ambient-grain 1.2s steps(6) infinite;
 }
 
 @keyframes ambient-drift {
@@ -47,18 +47,7 @@ body::after {
   100% { transform: translate3d(3%, 5%, 0) rotate(4deg) scale(1.04); }
 }
 
-/* Зерно «дрожит» только своей текстурой — линии сетки двигаются вместе с ним на 1–2px, это незаметно */
-@keyframes ambient-grain {
-  0%   { background-position: 0 0, 0 0, 0 0, 0 0; }
-  20%  { background-position: -40px 20px, 0 0, 0 0, 0 0; }
-  40%  { background-position: 30px -50px, 0 0, 0 0, 0 0; }
-  60%  { background-position: -60px -10px, 0 0, 0 0, 0 0; }
-  80%  { background-position: 50px 40px, 0 0, 0 0, 0 0; }
-  100% { background-position: 0 0, 0 0, 0 0, 0 0; }
-}
-
-/* На телефонах — меньше размытие (экономия батареи) и без сетки */
+/* На телефонах — без сетки */
 @media (max-width: 640px) {
-  body::before { filter: blur(20px); }
   body::after { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .92 0 0 0 0 .85 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
 }

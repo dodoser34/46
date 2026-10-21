@@ -14,8 +14,8 @@ if (isLoggedIn()) location.replace(next);
 
 initLayout();
 document.querySelector('[data-scene-slot="booking"]').innerHTML = layeredScene('booking', [
-  { file: 'tools.png', cls: 'el-tools', depth: 0.03, alt: '' },
-  { file: 'chair.png', cls: 'el-chair', depth: 0.06, alt: 'Барбер-кресло' },
+  { file: 'tools.webp', cls: 'el-tools', depth: 0.03, alt: '' },
+  { file: 'chair.webp', cls: 'el-chair', depth: 0.06, alt: 'Барбер-кресло' },
 ]);
 initScenes();
 

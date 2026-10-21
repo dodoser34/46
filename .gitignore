@@ -36,7 +36,7 @@ coverage.xml
 *.sqlite3-shm
 backups/
 
-# Временные файлы и исходные материалы генерации изображений.
+# Временные файлы и исходники изображений.
 # Готовые изображения frontend/assets/img/ остаются в Git.
 /tmp/
 /temp/
@@ -54,6 +54,3 @@ node_modules/
 .DS_Store
 Thumbs.db
 Desktop.ini
-
-# Локальные настройки инструментов
-.claude/

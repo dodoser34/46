@@ -7,7 +7,7 @@
 - `POST` — «создай» (новая запись, заказ, вход);
 - `PATCH` — «измени» (статус, профиль).
 
-Значок 🔒 — нужен вход в аккаунт, 👑 — только администратор.
+Пометка «вход» — нужен вход в аккаунт, «админ» — только администратор.
 
 ## Авторизация — `modules/accounts/routes.py`
 
@@ -16,8 +16,8 @@
 | POST | `/api/auth/register` | Регистрация: имя, email, телефон, пароль → токен |
 | POST | `/api/auth/login` | Вход по email и паролю → токен |
 | POST | `/api/auth/logout` | Выход: токен удаляется на сервере |
-| GET 🔒 | `/api/auth/me` | Данные текущего пользователя |
-| PATCH 🔒 | `/api/auth/me` | Изменить имя и телефон |
+| GET (вход) | `/api/auth/me` | Данные текущего пользователя |
+| PATCH (вход) | `/api/auth/me` | Изменить имя и телефон |
 
 ## Каталог — `modules/catalog/routes.py`
 
@@ -29,8 +29,8 @@
 | GET | `/api/barbershops` | Список барбершопов. Параметры: `city`, `q` (поиск), `sort` (`rating`/`distance`/`name`), `open_now`, `favorites`, `lat`+`lng` (координаты для «Рядом со мной») |
 | GET | `/api/barbershops/{id}` | Один барбершоп с мастерами и фото |
 | GET | `/api/barbershops/{id}/reviews` | Отзывы барбершопа |
-| POST 🔒 | `/api/barbershops/{id}/reviews` | Оставить отзыв (рейтинг пересчитывается) |
-| POST 🔒 | `/api/barbershops/{id}/favorite` | Добавить в избранное / убрать |
+| POST (вход) | `/api/barbershops/{id}/reviews` | Оставить отзыв (рейтинг пересчитывается) |
+| POST (вход) | `/api/barbershops/{id}/favorite` | Добавить в избранное / убрать |
 | GET | `/api/masters/{id}` | Профиль мастера |
 | GET | `/api/masters/{id}/reviews` | Отзывы о мастере |
 | POST | `/api/subscribe` | Подписка на новости по email |
@@ -41,8 +41,8 @@
 |---|---|---|
 | GET | `/api/masters/{id}/slots?date=…&service_id=…` | Свободное время мастера на день |
 | POST | `/api/bookings` | Создать запись (можно без входа) |
-| GET 🔒 | `/api/me/bookings` | Мои записи |
-| POST 🔒 | `/api/me/bookings/{id}/cancel` | Отменить свою запись |
+| GET (вход) | `/api/me/bookings` | Мои записи |
+| POST (вход) | `/api/me/bookings/{id}/cancel` | Отменить свою запись |
 
 ## Магазин — `modules/shop/routes.py`
 
@@ -52,17 +52,17 @@
 | GET | `/api/products` | Товары. Параметры: `category`, `q`, `sort` (`popular`/`rating`/`price_asc`/`price_desc`), `ids` |
 | GET | `/api/products/{id}` | Один товар |
 | POST | `/api/orders` | Оформить заказ |
-| GET 🔒 | `/api/me/orders` | Мои заказы |
+| GET (вход) | `/api/me/orders` | Мои заказы |
 
 ## Администратор — `modules/administration/routes.py`
 
 | Метод | Адрес | Что делает |
 |---|---|---|
-| GET 👑 | `/api/admin/summary` | Сводка: записи сегодня, новые записи и заказы, выручка, пользователи, подписчики |
-| GET 👑 | `/api/admin/bookings` | Все записи (фильтры: дата, статус) |
-| PATCH 👑 | `/api/admin/bookings/{id}` | Сменить статус записи |
-| GET 👑 | `/api/admin/orders` | Все заказы |
-| PATCH 👑 | `/api/admin/orders/{id}` | Сменить статус заказа |
+| GET (админ) | `/api/admin/summary` | Сводка: записи сегодня, новые записи и заказы, выручка, пользователи, подписчики |
+| GET (админ) | `/api/admin/bookings` | Все записи (фильтры: дата, статус) |
+| PATCH (админ) | `/api/admin/bookings/{id}` | Сменить статус записи |
+| GET (админ) | `/api/admin/orders` | Все заказы |
+| PATCH (админ) | `/api/admin/orders/{id}` | Сменить статус заказа |
 
 ## Служебное
 

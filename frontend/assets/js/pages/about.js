@@ -9,7 +9,7 @@ initLayout({ active: 'about' });
 
 document.querySelector('[data-scene-slot="about"]').innerHTML = layeredScene('about', [
   { text: 'Since 2024', cls: 'el-word', depth: 0.02 },
-  { file: 'portrait.png', cls: 'el-portrait fade-bottom', depth: 0.04, alt: 'Портрет мастера' },
+  { file: 'portrait.webp', cls: 'el-portrait fade-bottom', depth: 0.04, alt: 'Портрет мастера' },
 ]);
 initScenes();
 
